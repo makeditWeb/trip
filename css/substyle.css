@@ -1,0 +1,259 @@
+/* common */
+
+.nav_inner{
+    padding: 0;
+}
+
+/* 활동지 */
+
+.search_contain{
+    margin: 200px auto 0;
+    max-width: 1400px;
+}
+
+
+.range_container {
+    --_marker-border-clr: #0EA5E9;
+    --_marker-size: 15px;
+    --_track-heigt: 3px;
+  
+    --_tooltip-bg-clr: rgba(0, 0, 0, 0.4);
+    --_tooltip-txt-clr: var(--_marker-border-clr);
+    padding-bottom: 0;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sliders_control {
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 28px;
+}
+
+.slider-tooltip {
+    position: absolute;
+    width: fit-content;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    text-align: center;
+    color: #121;
+font-family: Montserrat;
+font-size: 12px;
+font-weight: 500;
+}
+
+
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: var(--_marker-size);
+    height: var(--_marker-size);
+    background-color: var(--_marker-border-clr);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--_marker-border-clr);
+    cursor: pointer;
+}
+
+#fromSliderTooltip {
+    left: 0; /* 슬라이더 바의 왼쪽 끝에 고정 */
+    translate: 0 0;
+}
+
+#toSliderTooltip {
+    right: 0; /* 슬라이더 바의 오른쪽 끝에 고정 */
+    translate: 0 0;
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: var(--_marker-size);
+    height: var(--_marker-size);
+    background-color: var(--_marker-border-clr);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--_marker-border-clr);
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background: #f7f7f7;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: var(--_track-heigt);
+    width: 100%;
+    position: absolute;
+    background-color: var(--_marker-border-clr);
+    pointer-events: none;
+    bottom: -30px;
+}
+
+#fromSlider {
+    height: 0;
+    z-index: 1;
+}
+
+.scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    position: relative;
+    width: calc(100% - var(--_marker-size));
+    margin-inline: auto;
+    font-size: 0.8rem;
+}
+
+.scale div {
+    position: absolute;
+    translate: -50% 0;
+}
+
+.scale div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% -125%;
+    width: 1px;
+    height: 10px;
+    background-color:#666;
+}
+
+.activity_contain_inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.activity_contain_Wrapper{
+    display: flex;
+
+
+}
+
+.activity_contain_Wrapper aside{
+    width: 25%;
+}
+
+.activity_contain_Wrapper .activity_list{
+    width: 75%;
+    margin-left: 50px;
+}
+
+.activity_list_inner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.activity_list_inner li{
+    width: 32%;
+}
+
+.activity_list_inner li a img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.activity_filter {
+    margin-top: 60px;
+}
+
+aside h4{
+    color:  #121;
+    font-family: "Montserrat", sans-serif;
+font-size: 20px;
+font-weight: 600;
+}
+
+.activity_filter .filter_title{
+    color:  #121;
+    font-family: "Montserrat", sans-serif;
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 20px;
+}
+
+.filter_contain{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter_contain:last-child{
+    border-bottom: none;
+}
+
+.filter_contain ul li{
+    margin-bottom: 8px;
+}
+
+.filter_contain ul li label{
+    color:  #121;
+font-family: 'Montserrat';
+font-size: 14px;
+font-weight: 500;
+cursor: pointer;
+}
+
+.acoodian_inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.filter_dropdown {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+
+.filter_dropdown .select2-container--default .select2-selection--single{
+    border-radius: 8px !important;
+}
+
+.activity_list_inner a{
+    text-decoration: none;
+
+}
+
+.image_title{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.imgage_cateogry{
+border: 1px solid var(--main-color);
+background: #fff;
+color: var(--main-color);
+font-size: 15px;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 30px;
+min-width: 70px;
+border-radius: 52px;
+font-family: 'Pretendard';
+margin-right: 10px;
+}
+
+.image_title p{
+    color: #181818;
+font-family: 'Pretendard';
+font-size: 20px;
+font-weight: 500;
+line-height: 40px; /* 200% */
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We share trip</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="header_inner">
+            <div class="header_top">
+                <select class="select_language">
+                    <option>Languages</option>
+                    <option>Korea</option>
+                    <option>English</option>
+                    <option>中國語</option>
+                    <option>日本語</option>
+                </select>
+    
+                <select class="select_money">
+                    <option>KRW</option>
+                    <option>USD</option>
+                    <option>CNY</option>
+                    <option>JPY</option>
+                    <option>THB</option>
+                </select>
+            </div>
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="./image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="./page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="./page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="./page/activity/activity.html">Activity</a></li>
+                        <li><a href="./page/resaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="./signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="./login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="./image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="./image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="./image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="./page/mypagae/mypage_main.html">
+                                                <img src="./image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="./page/mypagae/mypage_setting.html">
+                                                <img src="./image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="./image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="./image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="city_map">
+            <div class="city_select">
+                <select id="countrySelect" class="countrySelect">
+                    <option value="">Select a country</option>
+                    <option value="">Select a country</option>
+                    <option value="">Select a country</option>
+                </select>
+                <select id="citySelect" class="citySelect">
+                    <option value="">Select a city</option>
+                    <option value="">Select a city</option>
+                    <option value="">Select a city</option>
+                </select>
+            </div>
+            <div id="map" class="map">
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="main_list">
+            <div class="main-search_box">
+                <p>검색</p>
+                <div class="search_inner">
+                    <input type="text" placeholder="검색어를 입력해주세요.">
+                    <button type="button" class="search_icon">
+                        <img src="/image/search_icon.svg">
+                    </button>
+                </div>
+                <button type="button" class="filter_icon">
+                    <img src="/image/filter.svg">
+                </button>
+            </div>
+            <ul class="main_list_inner">
+                <li class="view_more">
+                    <img src="/image/main/main_list01.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list02.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list03.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list04.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list05.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list06.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list07.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list08.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list09.png">
+                    <div class="list_overlay">
+                        <h4>New Zealand</h4>
+                        <p>480 properties</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="./image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="./image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="./page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="./page/resaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="./page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="./page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="./page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    <!-- 팝업 -->
+
+<!-- 첫 번째 Modal -->
+<div class="modal_main">
+
+    <div class="modal-content">
+        <span class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+        </span>                         
+        <div class="modla_image">
+            <div class="popup-image">
+                <img src="./image/cateory_image.png">
+            </div>
+            <div class="icon_list">
+                <div class="share_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="39" viewBox="0 0 35 39" fill="none">
+                        <g clip-path="url(#clip0_1163_5522)">
+                            <path d="M28.4781 25.8151C31.3986 25.8125 33.9601 27.7977 34.7329 30.6625C35.5057 33.5273 34.2996 36.5639 31.7871 38.0784C29.2745 39.5937 26.0762 39.2114 23.9767 37.1472C21.8771 35.083 21.394 31.8445 22.7977 29.2391L11.5854 23.2931C9.89457 25.5033 7.01549 26.3846 4.40582 25.4904C1.79783 24.5953 0.0301818 22.1214 -0.00106673 19.321C-0.0314707 16.5206 1.68213 14.0071 4.27069 13.0545C6.85924 12.1019 9.75775 12.9179 11.4967 15.0895L22.5325 9.25337C21.1651 6.05699 22.4717 2.3306 25.518 0.73455C28.5643 -0.861492 32.3056 0.221718 34.0699 3.21022C35.8334 6.19872 35.015 10.0669 32.1975 12.0512C29.381 14.0355 25.5323 13.4565 23.4015 10.7266L12.3852 16.5524C13.1233 18.2215 13.1453 20.1285 12.4434 21.8138L23.8094 27.8415C25.0281 26.547 26.7139 25.8143 28.4764 25.8151H28.4781Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1163_5522">
+                            <rect width="35" height="39" fill="white" transform="matrix(1 0 0 -1 0 39)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="heart_icon" >
+                        <img src="./image/heart.svg" id="heartImage">
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="popup-content">
+            <div class="popup_head">
+                <p class="category_list">
+                    활동지
+                </p>
+                <p class="category_city">
+                    outdoor, Natural
+                </p>
+            </div>
+            <h4 class="main_place_title">
+                Vintage Double Decker Bus Tour & Thames River Cruise
+            </h4>
+            <div class="location_inner">
+                <img src="./image/location.png">
+                <p class="location_adress">Rua Madre Veronica 220 Centro, 그라마두 히우그란지두술(주) 브라질 </p>
+            </div>
+            <div class="tel_inner">
+                <img src="./image/tel.png">
+                <p class="tel_number">01 123 - 4567 </p>
+            </div>
+            <p class="content_wrapp">
+                Featuring free WiFi throughout the property, Lakeside Motel Waterfront offers accommodations in Lakes Entrance, 19 mi from Bairnsdale. Free private parking is available on site
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="./js/header.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/map.js"></script>
+</html>

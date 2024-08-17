@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>We share trip</title>
+    
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/reset.css">
+       
+    </head>
+<body>
+    <section>
+        <div class="sign-up_wrapper">
+            <ul class="tabs">
+                <li class="tab-link current" data-tab="tab-1">
+                    <span>1</span>
+                    <p>Basic Info</p>
+                </li>
+                <li class="tab-link" data-tab="tab-2">
+                    <span>2</span>
+                    <p>Preference Info</p>
+                </li>
+                <li class="tab-link" data-tab="tab-3">
+                    <span>3</span>
+                    <p>Create your Account</p>
+                </li>
+            </ul>
+        
+            <div id="tab-1" class="tab-content current">
+                <div class="sign_up_inner 1step">
+                    <div class="input_sign">
+                        <label>Name</label>
+                        <input type="text"  id="name">
+                    </div>
+                    <div class="input_sign">
+                        <label>Password</label>
+                        <input type="password" id="password">
+                    </div>
+                    <div class="input_sign">
+                        <label>Confirm your password</label>
+                        <input type="password" id="confirm_password">
+                    </div>
+                    <div class="input_sign">
+                        <label>Email</label>
+                        <div class="email_wrapper">
+                            <input type="email" class="email_input" id="email">
+                            <button class="email_submit" id="email_submit">인증받기</button>
+                        </div>
+                        <input type="text" class="email_check" id="email_check" style="display: none;">
+                    </div>
+                    <div class="chk_content">
+                        <div class="check_list">
+                            <div class="check_box">
+                                <input id="check01" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+  
+                                <label for="check01">서비스 이용약관 동의(필수)
+                                </label>
+                            </div>
+                            <a href="javascript:void(0)" class="check_more">내용보기</a>
+                        </div>
+                        <div class="check_list">
+                            <div class="check_box">
+                                <input id="check02" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+  
+                                <label for="check02">개인정보 수집 및 이용 동의(필수)
+                                </label>
+                            </div>
+                            <a href="javascript:void(0)" class="check_more">내용보기</a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="sign_up_button">
+                    <button type="button" id="next_btn_1"  class="btn next_btn" >Next</button>
+                </div>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <div class="sign_up_inner second-step">
+                    <div class="selectbox_wrapper">
+                        <div class="selectbox_inner">
+                            <p class="selectbox_qu">Where do you currently live? <span>*</span> </p>
+                            <div class="nice_wrppaer">
+                                <select class="nice-select"  id="current_living">
+                                    <option value="option1">옵션 1</option>
+                                    <option value="option2">옵션 2</option>
+                                    <option value="option3">옵션 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="selectbox_inner">
+                            <p class="selectbox_qu">What country’s passport do you possess? <span>*</span></p>
+                            <div class="nice_wrppaer">
+                                <select  class="nice-select" id="passport_country">
+                                    <option value="option1">옵션 1</option>
+                                    <option value="option2">옵션 2</option>
+                                    <option value="option3">옵션 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="selectbox_inner">
+                            <p class="selectbox_qu">What year are you born? <span>*</span>  </p>
+                            <div class="nice_wrppaer">
+                                <select  class="nice-select" id="birth_year">
+                                    <option value="option1">옵션 1</option>
+                                    <option value="option2">옵션 2</option>
+                                    <option value="option3">옵션 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="qu_wrapper">
+                        <div class="qu_list">
+                            <p class="qu_title">어떤 여행 테마를 좋아하세요?</p>
+                            <div class="question_list">
+                                <div class="question_inner">
+                                    <input id="check_qa01" type="checkbox" value="yes">
+          
+                                    <label for="check_qa01">Historical</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa02" type="checkbox" value="yes">
+          
+                                    <label for="check_qa02">Cultural</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa03"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa03">Entertaining</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa04"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa04">Shopping</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa05"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa05">Local</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa06"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa06">Culinary (or Food)</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa07" type="checkbox" value="yes">
+          
+                                    <label for="check_qa07">Natural (or Mountain & Beach)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qu_list">
+                            <p class="qu_title">Is your trip itinerary tightly packed or flexible?</p>
+                            <div class="question_list">
+                                <div class="question_inner">
+                                    <input id="check_qa021"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa021">Packed</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa022"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa022">Rather packed</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa023"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa023">Average</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa024"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa024">Rather Flexible</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa025"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa025">Flexible</label>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="qu_list">
+                            <p class="qu_title">Do you have any special dietary?</p>
+                            <div class="question_list">
+                                <div class="question_inner">
+                                    <input id="check_qa031" type="checkbox" value="yes">
+          
+                                    <label for="check_qa01">Veganism</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa032" type="checkbox" value="yes">
+          
+                                    <label for="check_qa032">Vegetarianism</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa033" type="checkbox" value="yes">
+          
+                                    <label for="check_qa033">Gluten-free</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa034" type="checkbox" value="yes">
+          
+                                    <label for="check_qa034">Lactose Intolerance</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa035"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa035">Shellfish Allergy</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa036"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa036">Nut Allergy</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa037"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa037">Halal</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qu_list">
+                            <p class="qu_title">Which transportation do you take often when traveling?</p>
+                            <div class="question_list">
+                                <div class="question_inner">
+                                    <input id="check_qa041"  type="checkbox" value="yes">
+          
+                                    <label for="check_qa041">Walk & Public Transportation</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa042" type="checkbox" value="yes">
+          
+                                    <label for="check_qa042">Taxi & Car Hiring</label>
+                                </div>
+                                <div class="question_inner">
+                                    <input id="check_qa043" type="checkbox" value="yes">
+          
+                                    <label for="check_qa043">Drive myself</label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sign_up_button">
+                        <button type="button" id="prev_btn_2" class="btn prev_btn">prev</button>
+                        <button type="button" class="btn next_btn"  id="next_btn_2" disabled>Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <div class="sign_up_inner three-step">
+                    <h2>회원가입이 완료되었습니다.</h2>
+                    <p class="welcome_name">[test123]님, 환영합니다.</p>
+                    <p class="bottom_text">
+                        회원님이 등록하신 메일로 인증메일이 발송되었습니다.
+                        <br>이메일을 확인하신 후, 이메일에 포함된 인증링크를 클릭하시면 이메일인증이 안료됩니다
+                    </p>
+                </div>
+
+                <div class="sign_up_link">
+                    <a href="javascript:void(0)" class="btn prev_btn">로그인</ㅁ>
+                    <a href="javascript:void(0)" class="btn next_btn">메인으로 가기</ㅁ>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<script src="./js/main.js"></script>
+</html>
