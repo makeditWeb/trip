@@ -371,4 +371,34 @@
 <script src="./js/header.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/map.js"></script>
+<script src="./js/modal.js"></script>
+
+<script>
+    
+
+document.addEventListener("DOMContentLoaded", function () {
+    var heartIcon = document.getElementById("heartImage");
+
+    if (heartIcon) { // 요소가 존재하는지 확인
+        console.log('Heart icon element found.');
+        
+        heartIcon.addEventListener("click", function () {
+            console.log('Image clicked');
+            
+            if (heartIcon.getAttribute("src") === "./image/heart.svg") {
+                console.log('Switching to filled heart');
+                heartIcon.setAttribute("src", "./image/heart-fill.svg");
+            } else {
+                console.log('Switching to empty heart');
+                heartIcon.setAttribute("src", "./image/heart.svg");
+                heartIcon.style.filter = ""; // 필터 제거
+            }
+        });
+    } else {
+        console.error('Heart icon element not found.');
+    }
+});
+
+
+</script>
 </html>
