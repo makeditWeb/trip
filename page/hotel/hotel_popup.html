@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body style="overflow: hidden;">
+    
+    <!-- 첫 번째 Modal -->
+    <div class="modal_main modal_hotel" style="display: block;">
+
+        <div class="modal-content">
+            <span class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </span>
+
+            <div class="m_hotel_top">
+                <h3 class="m_hotel_title">Hotel Okura Kobe</h3>
+                <div class="m_hotel_info">
+                    <div class="inner">
+                        <img src="/image/sub/location_bk.png">
+                        <p class="location_adress"> Rua Madre Veronica 220 Centro</p>
+                    </div>
+                    <div class="inner">
+                        <img src="/image/sub/tel_bk.png">
+                        <p class="tel_number">01+ 023-4567</p>
+                    </div>
+                </div>
+                <div class="grade_box">
+                    <div class="grade">
+                        <i class="star"></i>
+                        <i class="star"></i>
+                        <i class="star"></i>
+                        <i class="star"></i>
+                        <i class="star"></i>
+                    </div>
+                    <p>6,939</p>
+                </div>
+            </div>
+
+            <div class="popup-content">
+                <div class="m_hotel_img">
+                    <div class="l_box">
+                        <img src="/image/sub/temp.png" alt="">
+                    </div>
+                    <div class="r_box">
+                        <div class="sm_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>객실1</p>
+                        </div>
+                        <div class="sm_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>객실2</p>
+                        </div>
+                        <div class="sm_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>여행지1</p>
+                        </div>
+                        <div class="sm_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>여행지2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service_area">
+                    <div class="service">
+                        <h5 class="service_tit">General Services</h5>
+                        <ul class="service_list">
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>라운지</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>주차무료</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>발렛파킹</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>와이파이</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>피트니스룸</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>수영장</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="service">
+                        <h5 class="service_tit">Room Features</h5>
+                        <ul class="service_list">
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>전자레인지</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>냉장고</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>샤워부스</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>룸서비스</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>난방/냉방</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="service">
+                        <h5 class="service_tit">Front Office Services</h5>
+                        <ul class="service_list">
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>Language</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>Concierge</p>
+                            </li>
+                            <li>
+                                <img src="/image/icon/icon_wifi.png" alt="">
+                                <p>First aid kits</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="room_area">
+                    <h4 class="title">객실 추천</h4>
+
+                    <div class="room_box">
+                        <div class="room_thum">
+                            <img src="/image/sub/temp.png" alt="">
+                            <div class="recommend_btn">
+                                <div class="heart_icon">
+                                    <img src="/image/sub/heart.png" class="heart_image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room_cont">
+                            <div class="room_top">
+                                <p class="tit">패밀리 패키지
+                                    <span class="per_num">기준 2인 / 최대 4인</span>
+                                </p>
+                                <p class="bed_num">싱글 침대 3대 & 소파침대 1개</p>
+                                <ul class="basic_info">
+                                    <li><img src="/image/sub/basic_01.png" alt="">금연</li>
+                                    <li><img src="/image/sub/basic_02.png" alt="">파크뷰</li>
+                                    <li><img src="/image/sub/basic_03.png" alt="">무료 Wi-Fi</li>
+                                    <li><img src="/image/sub/basic_04.png" alt="">40~45m</li>
+                                </ul>
+                                <ul class="basic_info sm">
+                                    <li><img src="/image/sub/basic_05.png" alt="">조식 포함</li>
+                                </ul>
+                            </div>
+                            <div class="room_bottom">
+                                <p class="cancel"><strong>2024년 5월 11일까지</strong> 무료취소 가능</p>
+                                <div class="price_box">
+                                    <p class="price"><strong>200,000</strong> KRW / Night</p>
+                                    <button type="button" class="btn">Add Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room_box">
+                        <div class="room_thum">
+                            <img src="/image/sub/temp.png" alt="">
+                            <div class="recommend_btn">
+                                <div class="heart_icon">
+                                    <img src="/image/sub/heart.png" class="heart_image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room_cont">
+                            <div class="room_top">
+                                <p class="tit">패밀리 패키지
+                                    <span class="per_num">기준 2인 / 최대 4인</span>
+                                </p>
+                                <p class="bed_num">싱글 침대 3대 & 소파침대 1개</p>
+                                <ul class="basic_info">
+                                    <li><img src="/image/sub/basic_01.png" alt="">금연</li>
+                                    <li><img src="/image/sub/basic_02.png" alt="">파크뷰</li>
+                                    <li><img src="/image/sub/basic_03.png" alt="">무료 Wi-Fi</li>
+                                    <li><img src="/image/sub/basic_04.png" alt="">40~45m</li>
+                                </ul>
+                                <ul class="basic_info sm">
+                                    <li><img src="/image/sub/basic_05.png" alt="">조식 포함</li>
+                                </ul>
+                            </div>
+                            <div class="room_bottom">
+                                <p class="cancel"><strong>2024년 5월 11일까지</strong> 무료취소 가능</p>
+                                <div class="price_box">
+                                    <p class="price"><strong>200,000</strong> KRW / Night</p>
+                                    <button type="button" class="btn">Add Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m_hotel_btm">
+                <p class="price"><strong>235,000</strong> KRW / Night</p>
+                <button type="button" class="btn">Detail</button>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<!-- <script src="/js/map.js"></script>
+<script src="/js/hotel.js"></script> -->
+
+</html>

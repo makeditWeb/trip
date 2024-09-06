@@ -4,8 +4,481 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
 </head>
+
 <body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/resaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+
+    <section class="search_contain">
+        <div class="main-search_box">
+            <p>맞춤 추천</p>
+            <div class="hotel-search">
+                <div class="inner">
+                    <div class="cont">
+                        <p>여행지</p>
+                        <div>
+                            <input type="text" value="파리" readonly="readonly" class="detail_btn">
+                        </div>
+                    </div>
+                    <div class="cont">
+                        <p>체크인</p>
+                        <div class="ipt_calendar">
+                            <input type="text" value="2023.06.06" id="datepicker1">
+                        </div>
+                    </div>
+                    <div class="cont">
+                        <p>체크아웃</p>
+                        <div class="ipt_calendar">
+                            <input type="text" value="2023.06.06" id="datepicker2">
+                        </div>
+                    </div>
+                    <div class="cont">
+                        <p>객실 수</p>
+                        <div>
+                            <input type="text" value="1, 성인 2, 어린이 1" readonly="readonly" class="detail_btn">
+                        </div>
+                    </div>
+                    <button type="button" class="btn mint">검색</button>
+                </div>
+
+                <div class="cont_detail" style="display: none;">
+                    <div class="clear">
+                        <div class="col_5">
+                            <div class="cont">
+                                <p>City</p>
+                                <div class="ipt_search">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <p>State select
+                                    <div class="tooltip">
+                                        <button type="button" class="tooltip_btn"></button>
+                                        <div class="tooltip_cont">툴팁 내용</div>
+                                    </div>
+                                </p>
+                                <div>
+                                    <div class="chk_content">
+                                        <div class="check_list">
+                                            <div class="check_box">
+                                                <input id="check01" name="" type="checkbox" value="">
+                                                <label for="check01">Hotels & Full Service</label>
+                                            </div>
+                                        </div>
+                                        <div class="check_list">
+                                            <div class="check_box">
+                                                <input id="check02" name="" type="checkbox" value="">
+                                                <label for="check02">Budget Stays</label>
+                                            </div>
+                                        </div>
+                                        <div class="check_list">
+                                            <div class="check_box">
+                                                <input id="check03" name="" type="checkbox" value="">
+                                                <label for="check03">Local Experiences</label>
+                                            </div>
+                                        </div>
+                                        <div class="check_list">
+                                            <div class="check_box">
+                                                <input id="check04" name="" type="checkbox" value="">
+                                                <label for="check04">Nature-Inspired</label>
+                                            </div>
+                                        </div>
+                                        <div class="check_list">
+                                            <div class="check_box">
+                                                <input id="check05" name="" type="checkbox" value="">
+                                                <label for="check05">Others</label>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_5">
+                            <div class="cont">
+                                <p>Price</p>
+                                <div class="range_container filter_contain">
+                                    <div class="sliders_control">
+                                        <div id="fromSliderTooltip" class="slider-tooltip">115</div>
+                                        <input id="fromSlider" type="range" value="120" min="50" max="350" steps="10" />
+                                        <div id="toSliderTooltip" class="slider-tooltip">120</div>
+                                        <input id="toSlider" type="range" value="260" min="50" max="350" steps="10" />
+                                    </div>
+                                    
+                                    <!--scale steps defined by data-steps value -->
+                                    <div id="scale" class="scale" data-steps="100"></div>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <p>Guest</p>
+                                <div class="guest_list">
+                                    <p>객실</p>
+                                    <div class="count_box">
+                                        <button type="button" class="round_btn minus"></button>
+                                        <span class="num">1</span>
+                                        <button type="button" class="round_btn plus"></button>
+                                    </div>
+                                </div>
+                                <div class="guest_list">
+                                    <p>성인 <span>18세 이상</span></p>
+                                    <div class="count_box">
+                                        <button type="button" class="round_btn minus"></button>
+                                        <span class="num">1</span>
+                                        <button type="button" class="round_btn plus"></button>
+                                    </div>
+                                </div>
+                                <div class="guest_list">
+                                    <p>어린이 <span>17세 이하</span></p>
+                                    <div class="count_box">
+                                        <button type="button" class="round_btn minus"></button>
+                                        <span class="num">1</span>
+                                        <button type="button" class="round_btn plus"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_box">
+                        <button type="button" class="btn dark">적용</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hotel_contain">
+        <div class="hotel_contain_inner">
+            
+            <div class="title_area">
+                <h3>맞춤 추천</h3>
+            </div>
+
+            <div class="hotel_contain_Wrapper">
+                <div class="hotel_list">
+                    <ul class="hotel_list_inner">
+                        <li>
+                            <a href="hotel_detail.html">
+                                <div class="hotel_thum">
+                                    <img src="/image/sub/activity_list01.png">
+                                    <div class="recommend_btn">
+                                        <div class="heart_icon">
+                                            <img src="/image/sub/heart.png" class="heart_image">
+                                        </div>
+                                        <p class="txt">20</p>
+                                        <div class="share_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 35 39" fill="none">
+                                                <g clip-path="url(#clip0_1163_5522)">
+                                                    <path d="M28.4781 25.8151C31.3986 25.8125 33.9601 27.7977 34.7329 30.6625C35.5057 33.5273 34.2996 36.5639 31.7871 38.0784C29.2745 39.5937 26.0762 39.2114 23.9767 37.1472C21.8771 35.083 21.394 31.8445 22.7977 29.2391L11.5854 23.2931C9.89457 25.5033 7.01549 26.3846 4.40582 25.4904C1.79783 24.5953 0.0301818 22.1214 -0.00106673 19.321C-0.0314707 16.5206 1.68213 14.0071 4.27069 13.0545C6.85924 12.1019 9.75775 12.9179 11.4967 15.0895L22.5325 9.25337C21.1651 6.05699 22.4717 2.3306 25.518 0.73455C28.5643 -0.861492 32.3056 0.221718 34.0699 3.21022C35.8334 6.19872 35.015 10.0669 32.1975 12.0512C29.381 14.0355 25.5323 13.4565 23.4015 10.7266L12.3852 16.5524C13.1233 18.2215 13.1453 20.1285 12.4434 21.8138L23.8094 27.8415C25.0281 26.547 26.7139 25.8143 28.4764 25.8151H28.4781Z" fill="white"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1163_5522">
+                                                    <rect width="35" height="39" fill="white" transform="matrix(1 0 0 -1 0 39)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel_info">
+                                    <p class="title">Australia <span>5.0(6,666)</span></p>
+                                    <p class="price">￦ 120,000</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hotel_detail.html">
+                                <div class="hotel_thum">
+                                    <img src="/image/sub/activity_list01.png">
+                                    <div class="recommend_btn">
+                                        <div class="heart_icon">
+                                            <img src="/image/sub/heart.png" class="heart_image">
+                                        </div>
+                                        <p class="txt">20</p>
+                                        <div class="share_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 35 39" fill="none">
+                                                <g clip-path="url(#clip0_1163_5522)">
+                                                    <path d="M28.4781 25.8151C31.3986 25.8125 33.9601 27.7977 34.7329 30.6625C35.5057 33.5273 34.2996 36.5639 31.7871 38.0784C29.2745 39.5937 26.0762 39.2114 23.9767 37.1472C21.8771 35.083 21.394 31.8445 22.7977 29.2391L11.5854 23.2931C9.89457 25.5033 7.01549 26.3846 4.40582 25.4904C1.79783 24.5953 0.0301818 22.1214 -0.00106673 19.321C-0.0314707 16.5206 1.68213 14.0071 4.27069 13.0545C6.85924 12.1019 9.75775 12.9179 11.4967 15.0895L22.5325 9.25337C21.1651 6.05699 22.4717 2.3306 25.518 0.73455C28.5643 -0.861492 32.3056 0.221718 34.0699 3.21022C35.8334 6.19872 35.015 10.0669 32.1975 12.0512C29.381 14.0355 25.5323 13.4565 23.4015 10.7266L12.3852 16.5524C13.1233 18.2215 13.1453 20.1285 12.4434 21.8138L23.8094 27.8415C25.0281 26.547 26.7139 25.8143 28.4764 25.8151H28.4781Z" fill="white"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1163_5522">
+                                                    <rect width="35" height="39" fill="white" transform="matrix(1 0 0 -1 0 39)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel_info">
+                                    <p class="title">Australia <span>5.0(6,666)</span></p>
+                                    <p class="price">￦ 120,000</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hotel_detail.html">
+                                <div class="hotel_thum">
+                                    <img src="/image/sub/activity_list01.png">
+                                    <div class="recommend_btn">
+                                        <div class="heart_icon">
+                                            <img src="/image/sub/heart.png" class="heart_image">
+                                        </div>
+                                        <p class="txt">20</p>
+                                        <div class="share_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 35 39" fill="none">
+                                                <g clip-path="url(#clip0_1163_5522)">
+                                                    <path d="M28.4781 25.8151C31.3986 25.8125 33.9601 27.7977 34.7329 30.6625C35.5057 33.5273 34.2996 36.5639 31.7871 38.0784C29.2745 39.5937 26.0762 39.2114 23.9767 37.1472C21.8771 35.083 21.394 31.8445 22.7977 29.2391L11.5854 23.2931C9.89457 25.5033 7.01549 26.3846 4.40582 25.4904C1.79783 24.5953 0.0301818 22.1214 -0.00106673 19.321C-0.0314707 16.5206 1.68213 14.0071 4.27069 13.0545C6.85924 12.1019 9.75775 12.9179 11.4967 15.0895L22.5325 9.25337C21.1651 6.05699 22.4717 2.3306 25.518 0.73455C28.5643 -0.861492 32.3056 0.221718 34.0699 3.21022C35.8334 6.19872 35.015 10.0669 32.1975 12.0512C29.381 14.0355 25.5323 13.4565 23.4015 10.7266L12.3852 16.5524C13.1233 18.2215 13.1453 20.1285 12.4434 21.8138L23.8094 27.8415C25.0281 26.547 26.7139 25.8143 28.4764 25.8151H28.4781Z" fill="white"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1163_5522">
+                                                    <rect width="35" height="39" fill="white" transform="matrix(1 0 0 -1 0 39)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel_info">
+                                    <p class="title">Australia <span>5.0(6,666)</span></p>
+                                    <p class="price">￦ 120,000</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hotel_detail.html">
+                                <div class="hotel_thum">
+                                    <img src="/image/sub/activity_list01.png">
+                                    <div class="recommend_btn">
+                                        <div class="heart_icon">
+                                            <img src="/image/sub/heart.png" class="heart_image">
+                                        </div>
+                                        <p class="txt">20</p>
+                                        <div class="share_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 35 39" fill="none">
+                                                <g clip-path="url(#clip0_1163_5522)">
+                                                    <path d="M28.4781 25.8151C31.3986 25.8125 33.9601 27.7977 34.7329 30.6625C35.5057 33.5273 34.2996 36.5639 31.7871 38.0784C29.2745 39.5937 26.0762 39.2114 23.9767 37.1472C21.8771 35.083 21.394 31.8445 22.7977 29.2391L11.5854 23.2931C9.89457 25.5033 7.01549 26.3846 4.40582 25.4904C1.79783 24.5953 0.0301818 22.1214 -0.00106673 19.321C-0.0314707 16.5206 1.68213 14.0071 4.27069 13.0545C6.85924 12.1019 9.75775 12.9179 11.4967 15.0895L22.5325 9.25337C21.1651 6.05699 22.4717 2.3306 25.518 0.73455C28.5643 -0.861492 32.3056 0.221718 34.0699 3.21022C35.8334 6.19872 35.015 10.0669 32.1975 12.0512C29.381 14.0355 25.5323 13.4565 23.4015 10.7266L12.3852 16.5524C13.1233 18.2215 13.1453 20.1285 12.4434 21.8138L23.8094 27.8415C25.0281 26.547 26.7139 25.8143 28.4764 25.8151H28.4781Z" fill="white"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1163_5522">
+                                                    <rect width="35" height="39" fill="white" transform="matrix(1 0 0 -1 0 39)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel_info">
+                                    <p class="title">Australia <span>5.0(6,666)</span></p>
+                                    <p class="price">￦ 120,000</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div>
+                        <button type="button" class="btn-more">Show more results</button>
+                    </div>
+                </div>
+
+                <div class="map_area">
+                    <div id="map" class="map"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/resaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
     
 </body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/hotel.js"></script>
+
 </html>
