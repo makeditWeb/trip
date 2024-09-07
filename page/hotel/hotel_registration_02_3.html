@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/resaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="subPage_wrap">
+            <div class="reg_wrap">
+                <ul class="tabs">
+                    <li class="tab-link" data-tab="tab-1">
+                        <span>1</span>
+                        <p>계정등록</p>
+                    </li>
+                    <li class="tab-link current" data-tab="tab-2">
+                        <span>2</span>
+                        <p>숙소 등록</p>
+                    </li>
+                    <li class="tab-link" data-tab="tab-3">
+                        <span>3</span>
+                        <p>객실 설정</p>
+                    </li>
+                </ul>
+                <div id="tab-1" class="tab-content">1</div>
+                <div id="tab-2" class="tab-content current">
+                    <div class="reg_step_2">
+                        <div class="reg_tit_box">
+                            <div class="num_title">
+                                <span>3</span> 편의시설/서비스
+                            </div>
+                            <div class="progress_box">
+                                <div class="progress">
+                                    <div class="bar" style="width: 75%;"></div>
+                                </div>
+                                <p class="percent">75%</p>
+                            </div>
+                        </div>
+
+                        <div class="service_area">
+                            <div class="service">
+                                <h5 class="service_tit">General Services :</h5>
+                                <div class="chk_content">
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check01" name="" type="checkbox" value="">
+                                            <label for="check01">Conference rooms</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check02" name="" type="checkbox" value="">
+                                            <label for="check02">meeting spaces</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check03" name="" type="checkbox" value="">
+                                            <label for="check03">business centers</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check04" name="" type="checkbox" value="">
+                                            <label for="check04">Free Parking</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check05" name="" type="checkbox" value="">
+                                            <label for="check05">Paid parking</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check06" name="" type="checkbox" value="">
+                                            <label for="check06">valet parking</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check07" name="" type="checkbox" value="">
+                                            <label for="check07">Pet-friendly accommodations</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check08" name="" type="checkbox" value="">
+                                            <label for="check08">Romantic amenities for couples</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check09" name="" type="checkbox" value="">
+                                            <label for="check09">Self-service laundry facilities</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check10" name="" type="checkbox" value="">
+                                            <label for="check10">kids' club</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check11" name="" type="checkbox" value="">
+                                            <label for="check11">Spa</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check12" name="" type="checkbox" value="">
+                                            <label for="check12">indoor pool</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check13" name="" type="checkbox" value="">
+                                            <label for="check13">outdoor pool</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check14" name="" type="checkbox" value="">
+                                            <label for="check14">Kids' menu</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check15" name="" type="checkbox" value="">
+                                            <label for="check15">Wi-Fi</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check16" name="" type="checkbox" value="">
+                                            <label for="check16">Housekeeping laundry service</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check17" name="" type="checkbox" value="">
+                                            <label for="check17">Self-service laundry facilities</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service">
+                                <h5 class="service_tit">Room Features :</h5>
+                                <div class="chk_content">
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check18" name="" type="checkbox" value="">
+                                            <label for="check18">Microwave</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check19" name="" type="checkbox" value="">
+                                            <label for="check19">laundry machine</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check20" name="" type="checkbox" value="">
+                                            <label for="check20">cutleries</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check21" name="" type="checkbox" value="">
+                                            <label for="check21">fridge</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check22" name="" type="checkbox" value="">
+                                            <label for="check22">shower booth</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check23" name="" type="checkbox" value="">
+                                            <label for="check23">toiletries</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check24" name="" type="checkbox" value="">
+                                            <label for="check24">ADA-compliant rooms</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check25" name="" type="checkbox" value="">
+                                            <label for="check25">air-conditioning</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check26" name="" type="checkbox" value="">
+                                            <label for="check26">Tea/Coffee maker</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check27" name="" type="checkbox" value="">
+                                            <label for="check27">heating</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check28" name="" type="checkbox" value="">
+                                            <label for="check28">Bathtub</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check29" name="" type="checkbox" value="">
+                                            <label for="check29">In-Room Dining</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check30" name="" type="checkbox" value="">
+                                            <label for="check30">Baby Cot</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check31" name="" type="checkbox" value="">
+                                            <label for="check31">Soundproof</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service">
+                                <h5 class="service_tit">Front Office Services :</h5>
+                                <div class="chk_content">
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check32" name="" type="checkbox" value="">
+                                            <label for="check32">Front Desk</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check33" name="" type="checkbox" value="">
+                                            <label for="check33">Concierge Services</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check34" name="" type="checkbox" value="">
+                                            <label for="check34">First aid kits</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check35" name="" type="checkbox" value="">
+                                            <label for="check35">Language Service</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check36" name="" type="checkbox" value="">
+                                            <label for="check36">Korean</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check37" name="" type="checkbox" value="">
+                                            <label for="check37">English</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check38" name="" type="checkbox" value="">
+                                            <label for="check38">Japanese</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check39" name="" type="checkbox" value="">
+                                            <label for="check39">Chinese</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check40" name="" type="checkbox" value="">
+                                            <label for="check40">Portuguese</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check41" name="" type="checkbox" value="">
+                                            <label for="check41">French</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btm_btn_box">
+                            <button type="button" class="btn gray">이전</button>
+                            <button type="button" class="btn mint">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-3" class="tab-content"></div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/resaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/slide.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/hotel.js"></script>
+</html>

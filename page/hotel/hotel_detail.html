@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/resaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="subPage_wrap">
+
+            <div class="hotel_img_area">
+                <div class="l_box">
+                    <p class="title">Rooms</p>
+                    <div class="img_box">
+                        <img src="/image/sub/temp.png" alt="">
+                    </div>
+                </div>
+                <div class="r_box">
+                    <p class="title">위치 & 지도</p>
+                    <div class="sm_img_box">
+                        <div class="img_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>객실1</p>
+                        </div>
+                        <div class="img_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>객실2</p>
+                        </div>
+                        <div class="img_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>여행지1</p>
+                        </div>
+                        <div class="img_box">
+                            <img src="/image/sub/temp.png" alt="">
+                            <p>여행지2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info_box">
+                <div class="txt_box">
+                    <div>
+                        <h3>호텔 오쿠라 고베</h3>
+                        <div class="grade_box">
+                            <p class="country">브라질</p>
+                            <div class="grade">
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                            </div>
+                            <p>6,939</p>
+                        </div>
+                        <p class="sub_txt">Hotels & Full Service</p>
+                    </div>
+                    <div class="favorite_right">
+                        <div class="share_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" viewBox="0 0 28 31" fill="none">
+                                <g clip-path="url(#clip0_499_3881)">
+                                    <path d="M22.7827 20.5196C25.1191 20.5176 27.1683 22.0955 27.7865 24.3727C28.4047 26.6498 27.4399 29.0635 25.4299 30.2673C23.4198 31.4718 20.8612 31.1679 19.1815 29.5272C17.5019 27.8864 17.1154 25.3122 18.2383 23.2413L9.26849 18.5149C7.91585 20.2718 5.61258 20.9723 3.52485 20.2615C1.43846 19.55 0.0243407 17.5836 -0.000658074 15.3576C-0.0249812 13.1317 1.3459 11.1338 3.41674 10.3766C5.48759 9.61933 7.8064 10.268 9.19755 11.9941L18.0262 7.35515C16.9323 4.81443 17.9775 1.85243 20.4146 0.58378C22.8516 -0.68487 25.8447 0.176144 27.2561 2.55162C28.6669 4.9271 28.0122 8.00176 25.7582 9.57904C23.505 11.1563 20.4261 10.6961 18.7214 8.52616L9.90832 13.1569C10.4988 14.4836 10.5164 15.9995 9.95494 17.3391L19.0477 22.1304C20.0227 21.1014 21.3713 20.5189 22.7813 20.5196H22.7827Z" fill="black"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_499_3881">
+                                    <rect width="28" height="31" fill="white" transform="matrix(1 0 0 -1 0 31)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p>200</p>
+                        </div>
+                        <div class="heart_icon" >
+                            <img src="/image/sub/heart.png" >
+                            <p>200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_detail">
+                        <div class="item">
+                            <img src="/image/location.png">
+                            <p><span>호텔 등급 :</span> <strong>3등급</strong></p>
+                        </div>
+                        <div class="item">
+                            <img src="/image/location.png">
+                            <p>Rua Madre Veronica 220 Centro, 그라마두 히우그란지두술(주) 브라질</p>
+                        </div>
+                        <div class="item">
+                            <img src="/image/tel.png">
+                            <p>01 123 - 4567</p>
+                        </div>
+
+                    <div class="service_area">
+                        <div class="service">
+                            <h5 class="service_tit">General Services :</h5>
+                            <ul class="service_list">
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>라운지</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>주차무료</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>발렛파킹</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>와이파이</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>피트니스룸</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>수영장</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>와이파이</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>피트니스룸</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>수영장</p>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="service">
+                            <h5 class="service_tit">Room Features :</h5>
+                            <ul class="service_list">
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>전자레인지</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>냉장고</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>샤워부스</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>룸서비스</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>난방/냉방</p>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="service">
+                            <h5 class="service_tit">Front Office Services :</h5>
+                            <ul class="service_list">
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>Language</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>Concierge</p>
+                                </li>
+                                <li>
+                                    <img src="/image/icon/icon_wifi.png" alt="">
+                                    <p>First aid kits</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room_list_wrap">
+                <div class="content_tap">
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-10">객실</li>
+                        <li class="tab-link" data-tab="tab-20">패키지/특가</li>
+                    </ul>
+                
+                    <div id="tab-10" class="tab-content current">
+                        <div class="room_area">
+                            <div class="room_box">
+                                <div class="room_thum">
+                                    <img src="/image/sub/temp.png" alt="">
+                                    <div class="recommend_btn">
+                                        <div class="heart_icon">
+                                            <img src="/image/sub/heart.png" class="heart_image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="room_cont">
+                                    <div class="room_top">
+                                        <p class="tit">스위트룸 더블룸
+                                            <span class="per_num">기준 2인 / 최대 4인</span>
+                                        </p>
+                                        <p class="bed_num">싱글 침대 3대 & 소파침대 1개</p>
+                                        <ul class="basic_info">
+                                            <li><img src="/image/sub/basic_01.png" alt="">금연</li>
+                                            <li><img src="/image/sub/basic_02.png" alt="">파크뷰</li>
+                                            <li><img src="/image/sub/basic_03.png" alt="">무료 Wi-Fi</li>
+                                            <li><img src="/image/sub/basic_04.png" alt="">40~45m</li>
+                                        </ul>
+                                        <ul class="basic_info sm">
+                                            <li><img src="/image/sub/basic_05.png" alt="">조식 포함</li>
+                                            <li><img src="/image/sub/basic_06.png" alt="">기본 옵션에 추가로 : 스파</li>
+                                        </ul>
+                                    </div>
+                                    <div class="room_bottom">
+                                        <p class="cancel"><strong>2024년 5월 11일까지</strong> 무료취소 가능</p>
+                                        <div class="price_box">
+                                            <p class="price"><strong>200,000</strong> KRW / Night</p>
+                                            <button type="button" class="btn_add">Add Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="room_box">
+                                <div class="room_thum">
+                                    <img src="/image/sub/temp.png" alt="">
+                                    <div class="recommend_btn">
+                                        <div class="heart_icon">
+                                            <img src="/image/sub/heart.png" class="heart_image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="room_cont">
+                                    <div class="room_top">
+                                        <p class="tit">패밀리 패키지
+                                            <span class="per_num">기준 2인 / 최대 4인</span>
+                                        </p>
+                                        <p class="bed_num">싱글 침대 3대 & 소파침대 1개</p>
+                                        <ul class="basic_info">
+                                            <li><img src="/image/sub/basic_01.png" alt="">금연</li>
+                                            <li><img src="/image/sub/basic_02.png" alt="">파크뷰</li>
+                                            <li><img src="/image/sub/basic_03.png" alt="">무료 Wi-Fi</li>
+                                            <li><img src="/image/sub/basic_04.png" alt="">40~45m</li>
+                                        </ul>
+                                        <ul class="basic_info sm">
+                                            <li><img src="/image/sub/basic_05.png" alt="">조식 포함</li>
+                                        </ul>
+                                    </div>
+                                    <div class="room_bottom">
+                                        <p class="cancel"><strong>2024년 5월 11일까지</strong> 무료취소 가능</p>
+                                        <div class="price_box">
+                                            <p class="price"><strong>200,000</strong> KRW / Night</p>
+                                            <button type="button" class="btn_add">Add Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-20" class="tab-content">
+                        <div class="room_area">
+                            <div class="room_box">
+                                <div class="room_thum">
+                                    <img src="/image/sub/temp.png" alt="">
+                                    <div class="recommend_btn">
+                                        <div class="heart_icon">
+                                            <img src="/image/sub/heart.png" class="heart_image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="room_cont">
+                                    <div class="room_top">
+                                        <p class="tit">패밀리 패키지
+                                            <span class="per_num">기준 2인 / 최대 4인</span>
+                                        </p>
+                                        <p class="bed_num">싱글 침대 3대 & 소파침대 1개</p>
+                                        <ul class="basic_info">
+                                            <li><img src="/image/sub/basic_01.png" alt="">금연</li>
+                                            <li><img src="/image/sub/basic_02.png" alt="">파크뷰</li>
+                                            <li><img src="/image/sub/basic_03.png" alt="">무료 Wi-Fi</li>
+                                            <li><img src="/image/sub/basic_04.png" alt="">40~45m</li>
+                                        </ul>
+                                        <ul class="basic_info sm">
+                                            <li><img src="/image/sub/basic_05.png" alt="">조식 포함</li>
+                                        </ul>
+                                    </div>
+                                    <div class="room_bottom">
+                                        <p class="cancel"><strong>2024년 5월 11일까지</strong> 무료취소 가능</p>
+                                        <div class="price_box">
+                                            <p class="price"><strong>200,000</strong> KRW / Night</p>
+                                            <button type="button" class="btn_add">Add Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="room_detail">
+                    <div class="room_detail_card">
+                        <div class="card_tit">
+                            <span>객실</span>
+                            <p>스위트룸 더블룸</p>
+                        </div>
+                        <div class="ipt_area col2">
+                            <div class="ipt_box">
+                                <label for="">체크인</label>
+                                <input type="text" value="2023.06.06" class="ipt_datepicker">
+                            </div>
+                            <div class="ipt_box">
+                                <label for="">체크아웃</label>
+                                <input type="text" value="2023.06.06" class="ipt_datepicker">
+                            </div>
+                        </div>
+                        <div class="ipt_area">
+                            <div class="ipt_box">
+                                <label for="">객실당 인원 수</label>
+                                <input type="text" value="성인 4명, 어린이 0명" class="ipt_detail_btn">
+                            </div>
+                            <div class="ipt_detail">
+                                <div class="guest_list">
+                                    <p>객실</p>
+                                    <div class="count_box">
+                                        <button type="button" class="round_btn minus"></button>
+                                        <span class="num">1</span>
+                                        <button type="button" class="round_btn plus"></button>
+                                    </div>
+                                </div>
+                                <div class="guest_list">
+                                    <p>성인 <span>18세 이상</span></p>
+                                    <div class="count_box">
+                                        <button type="button" class="round_btn minus"></button>
+                                        <span class="num">1</span>
+                                        <button type="button" class="round_btn plus"></button>
+                                    </div>
+                                </div>
+                                <div class="guest_list">
+                                    <p>어린이 <span>17세 이하</span></p>
+                                    <div class="count_box">
+                                        <button type="button" class="round_btn minus"></button>
+                                        <span class="num">1</span>
+                                        <button type="button" class="round_btn plus"></button>
+                                    </div>
+                                </div>
+                                <div class="btn_box">
+                                    <button type="button" class="btn mint">확인</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="add_box">
+                            <div class="guest_list">
+                                <div class="check_box">
+                                    <input id="check01" name="wp-comment-cookies-consent" type="checkbox" value="" checked>
+                                    <label for="check01">조식 추가</label>
+                                </div>
+                                <div class="count_box">
+                                    <button type="button" class="round_btn minus"></button>
+                                    <span class="num">1</span>
+                                    <button type="button" class="round_btn plus"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total_price">
+                            <div class="price_box">
+                                <span>1박 가격</span>
+                                <strong>235,000 KRW</strong>
+                            </div>
+                            <div class="price_box add_price">
+                                <span>조식추가(x1)</span>
+                                <strong>+ 150,000 KRW</strong>
+                            </div>
+                            <div class="price_box total">
+                                <span>총 가격</span>
+                                <strong>505,500 KRW</strong>
+                            </div>
+                        </div>
+
+                        <span class="close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                            </svg>
+                        </span>            
+                    </div>
+
+                    <div class="total_box">
+                        <div class="total_price">
+                            <span>총 가격</span>
+                            <strong>505,500 KRW</strong>
+                        </div>
+                        
+                        <div class="btn_box">
+                            <button type="button" class="btn white">예약하기</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/resaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/slide.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/hotel.js"></script>
+</html>

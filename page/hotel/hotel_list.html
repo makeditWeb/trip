@@ -118,13 +118,13 @@
                     <div class="cont">
                         <p>체크인</p>
                         <div class="ipt_calendar">
-                            <input type="text" value="2023.06.06" id="datepicker1">
+                            <input type="text" value="2023.06.06" class="icon_datepicker">
                         </div>
                     </div>
                     <div class="cont">
                         <p>체크아웃</p>
                         <div class="ipt_calendar">
-                            <input type="text" value="2023.06.06" id="datepicker2">
+                            <input type="text" value="2023.06.06" class="icon_datepicker">
                         </div>
                     </div>
                     <div class="cont">
@@ -140,18 +140,30 @@
                     <div class="clear">
                         <div class="col_5">
                             <div class="cont">
-                                <p>City</p>
+                                <div class="tit">City</div>
                                 <div class="ipt_search">
                                     <input type="text">
                                 </div>
                             </div>
                             <div class="cont">
-                                <p>State select
+                                <div class="tit">State select
                                     <div class="tooltip">
                                         <button type="button" class="tooltip_btn"></button>
-                                        <div class="tooltip_cont">툴팁 내용</div>
+                                        <div class="tooltip_cont">
+                                            숙소 분류<br /><br />
+                                            Hotels & Full Service<br /> 
+                                            호텔, 리조트, 서비스 아파트먼트와 같은 풀서비스를 제공하는 숙소<br />
+                                            Budget Stays<br />
+                                            호스텔, 게스트하우스, 아파트먼트, 펜션, 캡슐호텔, 모텔처럼 제한된 서비스지만, 가성비 좋은 숙소 <br />
+                                            Local Experiences<br />
+                                            한옥스테이, 료칸, 샬레같은 지역 특색을 담은 숙소(Inn) <br />
+                                            Nature-Inspired<br />
+                                            캠핑장, 글램핑, 로지, 방갈로, 컨트리 하우스, 팜스테이, 트리하우스같이 자연을 즐길 수 있는 숙소 <br />
+                                            Others<br />
+                                            각자의 특색을 담은 숙소<br />
+                                        </div>
                                     </div>
-                                </p>
+                                </div>
                                 <div>
                                     <div class="chk_content">
                                         <div class="check_list">
@@ -190,7 +202,7 @@
                         </div>
                         <div class="col_5">
                             <div class="cont">
-                                <p>Price</p>
+                                <div class="tit">Price</div>
                                 <div class="range_container filter_contain">
                                     <div class="sliders_control">
                                         <div id="fromSliderTooltip" class="slider-tooltip">115</div>
@@ -204,7 +216,7 @@
                                 </div>
                             </div>
                             <div class="cont">
-                                <p>Guest</p>
+                                <div class="tit">Guest</div>
                                 <div class="guest_list">
                                     <p>객실</p>
                                     <div class="count_box">
