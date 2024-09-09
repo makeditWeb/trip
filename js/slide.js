@@ -21,3 +21,13 @@ var swiper = new Swiper(".other_slide", {
     loop: true,
     loopedSlides: 1,
 });
+
+var swiper = new Swiper(".restaurants_slide", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    loopedSlides: 1,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+});

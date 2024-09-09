@@ -1274,6 +1274,10 @@ line-height: 1.4;
 .activity_detail_wrapp{
     padding: 100px 0 0;
 }
+.activity_detail_wrapp .info_box {
+    max-width: 1400px;
+    margin: 70px auto 0;
+}
 
 .activity_detail_inner{
     max-width: 1400px;
@@ -1371,6 +1375,7 @@ font-weight: 500;
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-top: 8px;
 }
 
 .review_wrapp{
@@ -1551,7 +1556,7 @@ font-weight: 600;
 font-family: Pretendard;
 font-size: 20px;
 font-weight: 500;
-width: 33%;
+width: 100%;
 padding: 20px;
 border-bottom: 8px solid #D9D9D9;
 cursor: pointer;
@@ -1613,11 +1618,13 @@ margin-bottom: 6px;
 }
 
 .content_tap{
-    width: 70%;
+    width: calc(70% - 100px);
+    box-sizing: border-box;
 }
 
 .content_location{
     width: 30%;
+    box-sizing: border-box;
 }
 
 .facilities_feature ul{
@@ -1660,6 +1667,14 @@ margin-top: 8px;
 font-size: 20px;
 font-weight: 600;
 margin-bottom: 20px;
+}
+
+.feature_general .sub_txt, .feature_service .sub_txt {
+    color:  #2F2F28;
+    font-family: Pretendard;
+font-size: 16px;
+font-weight: 400;
+margin-bottom: 0;
 }
 
 .content_location #map{

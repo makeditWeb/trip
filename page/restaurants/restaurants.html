@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/restaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+
+    <section class="search_contain">
+        <div class="main-search_box">
+            <p>검색</p>
+            <div class="search_inner">
+                <input type="text" placeholder="검색어를 입력해주세요.">
+                <button type="button" class="search_icon">
+                    <img src="/image/search_icon.svg">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="activity_contain">
+        
+        <div class="activity_contain_inner">
+            <div class="filter_dropdown">
+                <select id="filterSelect" class="filterSelect">
+                    <option value="">인기순</option>
+                    <option value="">조회순</option>
+                    <option value="">낮은 금액순</option>
+                    <option value="">높은 금액순</option>
+                </select>
+            </div>
+            <div class="activity_contain_Wrapper">
+                <aside>
+                    <h4>Filters</h4>
+                    <div class="activity_filter">
+                        <div class="range_container filter_contain">
+                            <p class="filter_title">Price</p>
+                            <div class="sliders_control">
+                                <div id="fromSliderTooltip" class="slider-tooltip">115</div>
+                                <input id="fromSlider" type="range" value="120" min="50" max="350" steps="10" />
+                                <div id="toSliderTooltip" class="slider-tooltip">120</div>
+                                <input id="toSlider" type="range" value="260" min="50" max="350" steps="10" />
+                            </div>
+                            
+                            <!--scale steps defined by data-steps value -->
+                            <div id="scale" class="scale" data-steps="50"></div>
+                        </div>
+                        
+                        <div class="filter_rating filter_contain">
+                            <p class="filter_title">Rating</p>
+                            <div class="rating">
+                                <div class="grade_box">
+                                    <div class="grade">
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                    </div>
+                                    <p>(5점)</p>
+                                </div>
+                                <div class="grade_box">
+                                    <div class="grade">
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                    </div>
+                                    <p>(4점)</p>
+                                </div>
+                                <div class="grade_box">
+                                    <div class="grade">
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                    </div>
+                                    <p>(3점)</p>
+                                </div>
+                                <div class="grade_box">
+                                    <div class="grade">
+                                        <i class="star"></i>
+                                        <i class="star"></i>
+                                    </div>
+                                    <p>(2점)</p>
+                                </div>
+                                <div class="grade_box">
+                                    <div class="grade">
+                                        <i class="star"></i>
+                                    </div>
+                                    <p>(1점)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter_type filter_contain">
+                            <p class="filter_title">Types of Restaurants</p>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="restaurants" name="type" value="restaurants"> 
+                                    <label for="restaurants">Restaurants</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="cafés" name="type" value="cafés"> 
+                                    <label for="cafés">Cafés</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="range" name="type" value="range"> 
+                                    <label for="range">Price range</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="snack" name="type" value="snack"> 
+                                    <label for="snack">Snack</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="all" name="type" value="all"> 
+                                    <label for="all">All</label>
+                                </li>
+                            </ul>
+
+                        </div>
+                    
+                        <div class="filter_food filter_contain">
+                            <p class="filter_title">Food Features</p>
+                            <ul>
+                                <li><input type="checkbox" id="vegetarian" name="food" value="vegetarian"> 
+                                    <label for="vegetarian">Vegetarian</label>
+                                </li>
+                                <li><input type="checkbox" id="vegan" name="food" value="vegan">
+                                    <label for="vegan">Vegan</label>
+                                </li>
+                                <li><input type="checkbox" id="gluten" name="food" value="gluten">
+                                    <label for="gluten">Gluten-Free</label>
+                                </li>
+                                <li><input type="checkbox" id="farm" name="food" value="farm">
+                                    <label for="farm">Farm-to-table</label>
+                                </li>
+                                <li><input type="checkbox" id="kids" name="food" value="kids">
+                                    <label for="kids">Kids' menu</label>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <div class="filter_amenities filter_contain">
+                            <p class="filter_title">General Amenities</p>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="outdoor" name="amenities" value="outdoor"> 
+                                    <label for="outdoor">Outdoor seating</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="indoor" name="amenities" value="indoor"> 
+                                    <label for="indoor">Indoor seating</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="reservations" name="amenities" value="reservations"> 
+                                    <label for="reservations">Reservations</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="dining" name="amenities" value="dining"> 
+                                    <label for="dining">Private dining</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="parking" name="amenities" value="parking"> 
+                                    <label for="parking">Parking</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="wifi" name="amenities" value="wifi"> 
+                                    <label for="wifi">Wi-Fi</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="pet" name="amenities" value="pet"> 
+                                    <label for="pet">Pet friendly</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </aside>
+                <div class="activity_list">
+    
+                    <ul class="activity_list_inner">
+                        <li>
+                            <a href="restaurants_detail.html">
+                                <img src="/image/sub/activity_list01.png">
+                                <div class="image_title">
+                                    <span class="imgage_cateogry">
+                                        관광
+                                    </span>
+                                    <p>감천마을</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="restaurants_detail.html">
+                                <img src="/image/sub/activity_list02.png">
+                                <div class="image_title">
+                                    <span class="imgage_cateogry">
+                                        관광
+                                    </span>
+                                    <p>감천마을</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="restaurants_detail.html">
+                                <img src="/image/sub/activity_list03.png">
+                                <div class="image_title">
+                                    <span class="imgage_cateogry">
+                                        관광
+                                    </span>
+                                    <p>감천마을</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/restaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/activity.js"></script>
+</html>
