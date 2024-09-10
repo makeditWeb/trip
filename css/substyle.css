@@ -668,15 +668,15 @@ button.round_btn.plus:hover::after {
     color: #181818;
 }
 
-.hotel_thum {
+.hotel_thumb {
     position: relative;
 }
-.hotel_thum img{
+.hotel_thumb img{
     display: block;
     width: 100%;
     aspect-ratio: 1/1;
 }
-.hotel_thum .recommend_btn {
+.hotel_thumb .recommend_btn {
     position: absolute;
     right: 15px;
     bottom: 15px;
@@ -684,14 +684,14 @@ button.round_btn.plus:hover::after {
     align-items: center;
     gap: 5px;
 }
-.hotel_thum .recommend_btn .heart_icon {
+.hotel_thumb .recommend_btn .heart_icon {
     width: 16px;
     height: 14px;
 }
-.hotel_thum .recommend_btn .heart_icon img {
+.hotel_thumb .recommend_btn .heart_icon img {
     filter: none;
 }
-.hotel_thum .recommend_btn .txt {
+.hotel_thumb .recommend_btn .txt {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
@@ -795,23 +795,23 @@ button.round_btn.plus:hover::after {
 .room_box + .room_box {
     margin-top: 18px;
 }
-.room_thum {
+.room_thumb {
     position: relative;
     width: 41.75%;
     margin-right: 30px;
 }
-.room_thum > img {
+.room_thumb > img {
     width: 100%;
 }
-.room_thum .recommend_btn {
+.room_thumb .recommend_btn {
     position: absolute;
     right: 18px;
     bottom: 18px;
 }
-.room_thum .heart_icon {
+.room_thumb .heart_icon {
     height: 22px;
 }
-.room_thum .heart_icon img {
+.room_thumb .heart_icon img {
     filter: none;
 }
 .room_cont {
@@ -1085,6 +1085,37 @@ button.round_btn.plus:hover::after {
 }
 .subPage_wrap .btn.blue {
     background: #0D6EFD;
+}
+.subPage_wrap .btn_icon {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #181818;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.subPage_wrap .btn_icon.plus:before {
+    content: '';
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    border-radius: 100%;
+    background: var(--main-color);
+    color: #fff;
+}
+.subPage_wrap .btn_icon.plus:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(/image/sub/plus_wh.png) no-repeat;
 }
 
 .info_box {
@@ -1924,15 +1955,26 @@ button.round_btn.plus:hover::after {
     width: 100%;
     margin-top: 20px;
 }
+.write_wrap .row_box.type2 .que_tit {
+    flex: 1.5 1 0;
+}
+.write_wrap .row_box.type2 .item {
+    flex: 1 1 0;
+}
 .write_wrap .row_box .sub_tit,
 .write_wrap .row_box .que_tit {
     margin: 0;
+}
+.write_wrap .row_box .chk_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .write_wrap .filter_dropdown {
     width: 190px;
     margin-bottom: 0;
 }
-
 .write_wrap .reg_box li.tab-link {
     flex-direction: inherit;
     gap: 15px;
@@ -1953,8 +1995,16 @@ button.round_btn.plus:hover::after {
     font-size: 24px;
     font-weight: 500;
 }
+.write_wrap .que_tit > span {
+    margin-left: 10px;
+    color: #BDBDBC;
+    font-size: 20px;
+}
 .write_wrap .que_tit + .row_box {
     margin-top: 0;
+}
+.write_wrap .ipt_calendar {
+    width: 190px;
 }
 .write_wrap .ipt_calendar input {
     width: 100%;
@@ -2076,4 +2126,10 @@ button.round_btn.plus:hover::after {
 }
 .iti_cont .que_tit:first-child {
     margin-top: 0;
+}
+.iti_btn_box {
+    margin-top: 80px;
+}
+.list_visit {
+
 }
