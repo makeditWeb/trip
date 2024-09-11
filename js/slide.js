@@ -31,3 +31,15 @@ var swiper = new Swiper(".restaurants_slide", {
         el: ".swiper-pagination",
     },
 });
+
+var swiper = new Swiper(".featured_slide", {
+    slidesPerView: 3.5,
+    spaceBetween: 20,
+    loopedSlides: 1,
+});
+
+var swiper = new Swiper(".featured_slide2", {
+    slidesPerView: 4,
+    spaceBetween: 35,
+    loopedSlides: 1,
+});

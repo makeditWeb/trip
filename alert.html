@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body style="overflow: hidden;">
+
+    <!-- 팝업 -->
+
+<!-- 첫 번째 Modal -->
+<div class="modal_main alert_wrap" style="display: block;">
+    <div class="modal-content">
+        <span class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+        </span>                         
+        
+        <div class="alert_cont">
+            <div class="icon_img"><img src="/image/alert.png" alt=""></div>
+            <strong>관리자가 심사중입니다.</strong>
+            <p>승인까지 최대 3일이 소요됩니다.<br />문의사항이 있다면 문의를 남겨주세요</p>
+        </div>
+
+        <div class="alert_btm tar">
+            <button class="btn bk">닫기</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal_main alert_wrap" style="display: none;">
+    <div class="modal-content">
+        <span class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+        </span>                         
+        
+        <div class="alert_cont">
+            <div class="icon_img"><img src="/image/alert.png" alt=""></div>
+            <p>심사 완료 후 등록이 완료됩니다.<br />해당 장소에 대한 리뷰를 남겨주세요.</p>
+        </div>
+
+        <div class="alert_btm">
+            <button class="btn gray">나중에 하기</button>
+            <button class="btn blue">리뷰하러가기</button>
+        </div>
+    </div>
+</div>
+</body>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+
+</html>

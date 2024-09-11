@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/restaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="itinerary_search"><!-- 검색 전 클래스 before 추가 : itinerary_search.html 참고 -->
+        <img src="/image/sub/temp_big.png" alt="">
+        <section class="search_contain">
+            <p>Where do you want to go?</p>
+            <div class="main-search_box">
+                <div class="search_inner">
+                    <input type="text" placeholder="">
+                    <button type="button" class="search_icon">
+                        <img src="/image/search_icon.svg">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <div class="subPage_wrap itinerary_wrap">
+            <div class="itinerary_title">
+                <h2>파리 <span>프랑스의 수도</span></h2>
+                <a href="itinerary_registration_01.html" class="btn_icon plus">일정만들기</a>
+            </div>
+            <div class="visual_map">
+                <div class="item visual">
+                    <img src="/image/sub/temp.png" alt="">
+                </div>
+                <div class="item map">
+                    <div id="map" class="map"></div>
+                </div>
+            </div>
+
+            <ul class="main_list_inner">
+                <li class="view_more">
+                    <img src="/image/main/main_list01.png">
+                    <div class="list_overlay">
+                        <h4>활동1</h4>
+                        <p>명소 • 활동적</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list02.png">
+                    <div class="list_overlay">
+                        <h4>활동2</h4>
+                        <p>명소 • 활동적</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list03.png">
+                    <div class="list_overlay">
+                        <h4>활동3</h4>
+                        <p>명소 • 활동적</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/image/main/main_list04.png">
+                    <div class="list_overlay">
+                        <h4>활동4</h4>
+                        <p>명소 • 활동적</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="center_box">
+                <h3>Paris의  맛집, 재미있는 활동을 공유해주세요</h3>
+                <a href="itinerary_share.html" class="btn_txt">공유하러가기</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab_wrap">
+        <ul class="tabs-2">
+            <li class="tab-link current" data-tab="tab-10">기본정보</li>
+            <li class="tab-link" data-tab="tab-20">비자</li>
+            <li class="tab-link" data-tab="tab-30">환율</li>
+            <li class="tab-link" data-tab="tab-40">도시 안전 순위</li>
+            <li class="tab-link" data-tab="tab-50">2인 추천 예산</li>
+            <li class="tab-link" data-tab="tab-60">준비물 리스트</li>
+        </ul>
+        <div class="bg_gray">
+            <div id="tab-10" class="tab-content-2 current">
+                <div class="list_box_item">
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">월별로 알아보는 파리 날씨</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리의 매력포인트</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">월별로 알아보는 파리 날씨</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="tab-20" class="tab-content-2">
+                <div class="list_box_item">
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">월별로 알아보는 파리 날씨</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리의 매력포인트</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">월별로 알아보는 파리 날씨</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="tab-30" class="tab-content-2">
+                <div class="list_box_item">
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">월별로 알아보는 파리 날씨</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리의 매력포인트</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">월별로 알아보는 파리 날씨</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>110</span></li>
+                                    <li>저장 <span>1,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="tab-40" class="tab-content-2">
+                <div class="list_box_item">
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="tab-50" class="tab-content-2">
+                <div class="list_box_item">
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="tab-60" class="tab-content-2">
+                <div class="list_box_item">
+                    <a href="" class="box_item">
+                        <div class="cont">
+                            <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="tit">파리 기초 정보</p>
+                                <ul class="bullet_list">
+                                    <li>리뷰 <span>145</span></li>
+                                    <li>저장 <span>3,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="center_box">
+            <h3>Featured Travel Spots for you</h3>
+        </div>
+        <div class="featured_slide_wrap">
+            <div class="swiper featured_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="featured_link">
+                            <div class="featured_thumb">
+                                <img src="/image/main/main_list01.png">
+                            </div>
+                            <div class="featured_info">
+                                <p class="featured_info_title">파리에서 1시간 이내 여행지</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="featured_link">
+                            <div class="featured_thumb">
+                                <img src="/image/main/main_list02.png">
+                            </div>
+                            <div class="featured_info">
+                                <p class="featured_info_title">파리에서 5시간 이내 목적지</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="featured_link">
+                            <div class="featured_thumb">
+                                <img src="/image/main/main_list03.png">
+                            </div>
+                            <div class="featured_info">
+                                <p class="featured_info_title">파리 근교 카페</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="featured_link">
+                            <div class="featured_thumb">
+                                <img src="/image/main/main_list04.png">
+                            </div>
+                            <div class="featured_info">
+                                <p class="featured_info_title">파리 여행 추천</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="subPage_wrap best_wrap">
+            <div class="center_box">
+                <h3>Best Itinerary for travelers for the first time in Paris</h3>
+            </div>
+            <div class="best_cont_area">
+                <div class="cont">
+                    <a href="#" class="best_link">
+                        <div class="best_thumb">
+                            <img src="/image/main/main_list01.png">
+                        </div>
+                        <div class="best_info">
+                            <p class="best_info_title">Sydeny’s 10 most fashionable 5 star hotels</p>
+                            <p class="best_info_txt">Browse the fastest growing tourism sector in the heart of Australia tourism capital ....</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a href="#" class="best_link">
+                        <div class="best_thumb">
+                            <img src="/image/main/main_list02.png">
+                        </div>
+                        <div class="best_info">
+                            
+                            <p class="best_info_txt">Browse the fastest growing tourism sector in the heart of Australia tourism capital ....</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a href="#" class="best_link">
+                        <div class="best_thumb">
+                            <img src="/image/main/main_list03.png">
+                        </div>
+                        <div class="best_info">
+                            <p class="best_info_title">Sydeny’s 10 most fashionable 5 star hotels</p>
+                            <p class="best_info_txt">Browse the fastest growing tourism sector in the heart of Australia tourism capital ....</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/restaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/slide.js"></script>
+
+</html>

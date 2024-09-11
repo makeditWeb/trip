@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/restaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="itinerary_search"><!-- 검색 전 클래스 before 추가 : itinerary_search.html 참고 -->
+        <img src="/image/sub/temp_big.png" alt="">
+    </div>
+
+    <section>
+        <div class="subPage_wrap write_wrap">
+            <div class="reg_wrap">
+                
+                <div class="reg_tit_box">
+                    <div class="num_title">
+                        <span>1</span> 일정 선택하기
+                    </div>
+                </div>
+
+                <div class="reg_box">
+
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-10">
+                            <span>1</span>
+                            <p>여행 일정 입력</p>
+                        </li>
+                        <li class="tab-link" data-tab="tab-20">
+                            <span>2</span>
+                            <p>여행 동행</p>
+                        </li>
+                        <li class="tab-link" data-tab="tab-30">
+                            <span>3</span>
+                            <p>하루 예산 [선택]</p>
+                        </li>
+                    </ul>
+                    <div id="tab-10" class="tab-content current">
+                        <div class="iti_cont">
+                            <div class="que_tit">도시 검색
+                                <button type="button" class="btn white">도시검색하기</button>
+                            </div>
+                            <div class="row_box">
+                                <div class="filter_dropdown">
+                                    <select id="" class="filterSelect">
+                                        <option value="">동남아시아</option>
+                                        <option value="">미주</option>
+                                        <option value="">유럽</option>
+                                    </select>
+                                </div>
+                                <div class="filter_dropdown">
+                                    <select id="" class="filterSelect">
+                                        <option value="">태국</option>
+                                        <option value="">미국</option>
+                                        <option value="">프랑스</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="que_tit">여행 시작 날짜</div>
+                            <div class="ipt_calendar">
+                                <input type="text" value="2023.06.06" class="icon_datepicker">
+                            </div>
+
+                            <div class="que_tit">여행 종료 날짜</div>
+                            <div class="ipt_calendar">
+                                <input type="text" value="2023.06.06" class="icon_datepicker">
+                            </div>
+                        </div>
+                        <div class="iti_cont">
+                            <div class="que_tit">도시 검색
+                                <button type="button" class="btn white">도시검색하기</button>
+                            </div>
+                            <div class="row_box">
+                                <div class="filter_dropdown">
+                                    <select id="" class="filterSelect">
+                                        <option value="">동남아시아</option>
+                                        <option value="">미주</option>
+                                        <option value="">유럽</option>
+                                    </select>
+                                </div>
+                                <div class="filter_dropdown">
+                                    <select id="" class="filterSelect">
+                                        <option value="">태국</option>
+                                        <option value="">미국</option>
+                                        <option value="">프랑스</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="que_tit">여행 시작 날짜</div>
+                            <div class="ipt_calendar">
+                                <input type="text" value="2023.06.06" class="icon_datepicker">
+                            </div>
+
+                            <div class="que_tit">여행 종료 날짜</div>
+                            <div class="ipt_calendar">
+                                <input type="text" value="2023.06.06" class="icon_datepicker">
+                            </div>
+                        </div>
+                        <div class="iti_btn_box">
+                            <button type="button" class="btn_icon plus">목적지 추가</button>
+                        </div>
+                        <div class="btm_btn_box">
+                            <button type="button" class="btn mint">다음</button>
+                        </div>
+                    </div>
+                    <div id="tab-20" class="tab-content">
+                        <div class="que_tit">누구와 여행하나요?</div>
+                        <div class="box_radio">
+                            <div class="item">
+                                <input type="radio" value="" id="r1" name="rName" checked>
+                                <label for="r1">혼자서</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" value="" id="r2" name="rName">
+                                <label for="r2">커플</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" value="" id="r3" name="rName">
+                                <label for="r3">친구들</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" value="" id="r4" name="rName">
+                                <label for="r4">부모님</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" value="" id="r5" name="rName">
+                                <label for="r5">아이와</label>
+                            </div>
+                        </div>
+                        <div class="btm_btn_box">
+                            <button type="button" class="btn gray">이전</button>
+                            <button type="button" class="btn mint">다음</button>
+                        </div>
+                    </div>
+                    <div id="tab-30" class="tab-content">
+                        <div class="que_tit">하루 예산을 선택해 주세요</div>
+                        <div class="filter_dropdown">
+                            <select id="" class="filterSelect">
+                                <option value="">예산 선택</option>
+                                <option value="">100,000</option>
+                                <option value="">1,000,000</option>
+                            </select>
+                        </div>
+                        <div class="btm_btn_box">
+                            <button type="button" class="btn gray">이전</button>
+                            <button type="button" class="btn mint">다음</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+
+                
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/restaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/datepicker.js"></script>
+<script src="/js/activity.js"></script>
+</html>

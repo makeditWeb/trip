@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/restaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="itinerary_search"><!-- 검색 전 클래스 before 추가 : itinerary_search.html 참고 -->
+        <img src="/image/sub/temp_big.png" alt="">
+    </div>
+
+    <section>
+        <div class="subPage_wrap write_wrap">
+            <div class="reg_wrap">
+                
+                <div class="reg_tit_box">
+                    <div class="num_title">
+                        <span>2</span> 도시 일정 설정 - A도시
+                    </div>
+                </div>
+
+                <div class="reg_box">
+
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-10">
+                            <span>1</span>
+                            <p>도시 일정 설정</p>
+                        </li>
+                        <li class="tab-link" data-tab="tab-20">
+                            <span>2</span>
+                            <p>도시 일정질문</p>
+                        </li>
+                    </ul>
+                    <div id="tab-10" class="tab-content current">
+                        <div class="iti_cont">
+                            <div class="que_tit">도시A 일정 설정</div>
+                            <div class="row_box">
+                                <div class="row_box">
+                                    <div class="que_tit">도착 날짜</div>
+                                    <div class="ipt_calendar">
+                                        <input type="text" value="2023.06.06" class="icon_datepicker">
+                                    </div>
+                                </div>
+                                <div class="row_box">
+                                    <div class="que_tit">도착 시간 <span>[선택]</span></div>
+                                    <div class="filter_dropdown">
+                                        <select id="" class="filterSelect">
+                                            <option value="">00:00</option>
+                                            <option value="">01:00</option>
+                                            <option value="">02:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row_box">
+                                <div class="row_box">
+                                    <div class="que_tit">출발 날짜</div>
+                                    <div class="ipt_calendar">
+                                        <input type="text" value="2023.06.06" class="icon_datepicker">
+                                    </div>
+                                </div>
+                                <div class="row_box">
+                                    <div class="que_tit">출발 시간 <span>[선택]</span></div>
+                                    <div class="filter_dropdown">
+                                        <select id="" class="filterSelect">
+                                            <option value="">00:00</option>
+                                            <option value="">01:00</option>
+                                            <option value="">02:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="btm_btn_box">
+                            <button type="button" class="btn mint">다음</button>
+                        </div>
+                    </div>
+                    <div id="tab-20" class="tab-content">
+                        <div class="row_box type2">
+                            <div class="que_tit">1. 처음 오시나요?</div>
+                            <div class="item">
+                                <div class="box_radio">
+                                    <div class="item">
+                                        <input type="radio" value="" id="r1" name="rName" checked>
+                                        <label for="r1">Yes</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" value="" id="r2" name="rName">
+                                        <label for="r2">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row_box type2">
+                            <div class="que_tit">2. 여행 테마</div>
+                            <div class="item">
+                                <div class="chk_content">
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check01" name="" type="checkbox" value="">
+                                            <label for="check01">테마1</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check02" name="" type="checkbox" value="">
+                                            <label for="check02">테마2</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check03" name="" type="checkbox" value="">
+                                            <label for="check03">테마3</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check04" name="" type="checkbox" value="">
+                                            <label for="check04">테마4</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check05" name="" type="checkbox" value="">
+                                            <label for="check05">테마5</label>
+                                        </div>
+                                    </div>
+                                    <div class="check_list">
+                                        <div class="check_box">
+                                            <input id="check06" name="" type="checkbox" value="">
+                                            <label for="check06">테마6</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="que_tit">3. 꼭 방문하고 싶은 곳
+                            <button type="button" class="btn white">내 저장 확인하기</button>
+                        </div>
+                        <div class="filter_dropdown">
+                            <select id="" class="filterSelect">
+                                <option value="">오사카</option>
+                                <option value="">후쿠오카</option>
+                                <option value="">오키나와</option>
+                            </select>
+                        </div>
+                        <div class="list_visit">
+                            <div class="cont">
+                                <div class="round_chk">
+                                    <div class="item">
+                                        <input id="chk1-1" name="chk1" type="checkbox" value="">
+                                        <label for="chk1-1"></label>
+                                    </div>
+                                </div>
+                                <div class="thumb">
+                                    <img src="/image/sub/temp.png" alt="">
+                                </div>
+                                <div class="name">장소 이름</div>
+                                <div class="txt">활동지 / outdoor, Natural</div>
+                                <div class="txt">해운대구 마린시티3로 37, 2층, Busan</div>
+                            </div>
+                            <div class="cont">
+                                <div class="round_chk">
+                                    <div class="item">
+                                        <input id="chk2-1" name="chk2" type="checkbox" value="">
+                                        <label for="chk2-1"></label>
+                                    </div>
+                                </div>
+                                <div class="thumb">
+                                    <img src="/image/sub/temp.png" alt="">
+                                </div>
+                                <div class="name">장소 이름</div>
+                                <div class="txt">활동지 / outdoor, Natural</div>
+                                <div class="txt">해운대구 마린시티3로 37, 2층, Busan</div>
+                            </div>
+                            <div class="cont">
+                                <div class="round_chk">
+                                    <div class="item">
+                                        <input id="chk3-1" name="chk3" type="checkbox" value="">
+                                        <label for="chk3-1"></label>
+                                    </div>
+                                </div>
+                                <div class="thumb">
+                                    <img src="/image/sub/temp.png" alt="">
+                                </div>
+                                <div class="name">장소 이름</div>
+                                <div class="txt">활동지 / outdoor, Natural</div>
+                                <div class="txt">해운대구 마린시티3로 37, 2층, Busan</div>
+                            </div>
+                        </div>
+
+                        <div class="btm_btn_box">
+                            <button type="button" class="btn gray">이전</button>
+                            <button type="button" class="btn mint">다음</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+
+                
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/restaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/datepicker.js"></script>
+<script src="/js/activity.js"></script>
+</html>

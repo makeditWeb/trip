@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <nav>
+                <div class="nav_inner">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/image/header_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar_list">
+        
+                        <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                        <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                        <li><a href="/page/activity/activity.html">Activity</a></li>
+                        <li><a href="/page/restaurants/restaurants.html">Restaurants</a></li>
+                    </ul>
+                    <div class="header_right">
+                        <!-- 로그인 전 -->
+                        <div class="login_before">
+                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
+                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="login_after" style="display: none;">
+                            <div class="alarm">
+                                <img src="/image/alarm.png">
+                                <span></span>
+                            </div>
+                            <div class="mypage_dropdown">
+                                <div class="mypage_image">
+                                    <img src="/image/mypage.png" alt="mypage">
+                                </div>
+                                <div class="mypage_link" >
+                                    <div class="mypage_name" id="mypageName">
+                                        <p>Shahryar</p>
+                                        <img src="/image/down.png">
+                                    </div>
+                                    <ul class="dropdown_quick" id="dropdownQuick">
+                                        <li>
+                                            <a href="/page/mypagae/mypage_main.html">
+                                                <img src="/image/mypage_icon.png">
+                                                <p>Mypage</p>
+                                            </a>
+            
+                                        </li>
+                                        <li>
+                                            <a href="/page/mypagae/mypage_setting.html">
+                                                <img src="/image/setting.png">
+                                                <p>Settings</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 후 -->
+                                        <li>
+                                            <a href="/" >
+                                                <img src="/image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+            
+                                        </li>
+                                        <!-- 로그인 전 -->
+                                        <li>
+                                            <a href="/">
+                                                <img src="/image/login.svg">
+                                                <p>Loin</p>
+                                            </a>
+            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    
+            </nav>
+        </div>
+
+    </header>
+
+
+    <section>
+        <div class="subPage_wrap reservation_wrap">
+            <div class="title_box">
+                <h2>Secure your reservation</h2>
+            </div>
+
+            <div class="mandatory_box">
+                <i class="icon"></i>
+                <div>
+                    Check the latest COVID-19 restrictions before you travel.
+                    <a href="" class="btn_txt">Learn more</a>
+                </div>
+            </div>
+
+            <div class="reservation_cont">
+                <div class="reservation_left">
+                    <div class="reservation_box">
+                        <div class="reservation_head">
+                            <img src="/image/sub/user.png" alt="">
+                            <h3>Rooms</h3>
+                            <p>2 adults, 1 double bed and 1 twin bed, Non-smoking</p>
+                        </div>
+                        <div class="reservation_body">
+                            <div class="ipt_col">
+                                <div class="ipt_gray">
+                                    <label for="">First name</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="ipt_gray">
+                                    <label for="">Last name</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="ipt_gray">
+                                <label for="">Mobile number</label>
+                                <div class="ipt_col">
+                                    <select name="" id="">
+                                        <option value="">+61</option>
+                                    </select>
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="check_box">
+                                <input id="check01" name="" type="checkbox" value="">
+                                <label for="check01">Receive text alerts about this trip.</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reservation_box">
+                        <div class="reservation_head">
+                            <img src="/image/sub/payment.png" alt="">
+                            <h3>Payment options</h3>
+                        </div>
+
+                        <ul class="tabs">
+                            <li class="current" data-tab="tab-10">Debit/Credit Card</li>
+                            <li data-tab="tab-20">Paypal</li>
+                            <li data-tab="tab-30">Bank transfer</li>
+                        </ul>
+                        <div class="tab-content current" id="tab-10">
+                            <div class="reservation_body">
+                                <div class="ipt_gray card_ipt">
+                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="ipt_gray">
+                                    <label for="">Name on card</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="ipt_gray">
+                                    <label for="">Debit/Credit card number</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="ipt_gray">
+                                    <label for="">Expiration Date</label>
+                                    <div class="ipt_col">
+                                        <select name="" id="">
+                                            <option value="">Month</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ipt_col">
+                                    <div class="ipt_gray">
+                                        <label for="">Security Code</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                    <div class="ipt_gray">
+                                        <label for="">Billing Zip code</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-20">
+                            <div class="reservation_body">
+                                Paypal
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-30">
+                            <div class="reservation_body">
+                                Bank transfer
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reservation_box">
+                        <div class="reservation_head">
+                            <h3>Important information about your booking</h3>
+                        </div>
+                        <div class="reservation_body">
+                            <ol class="num_list">
+                                <li><span>1.</span>This rate is non-refundable. If you change or cancel your booking you will not get a refund or credit to use for a future stay.</li>
+                                <li><span>2.</span>Stay extensions will require a new reservation.</li>
+                                <li><span>3.</span>Front desk staff will greet guests on arrival</li>
+                                <li><span>4.</span>No refunds will be issued for late check-in or early check-out.</li>
+                            </ol>
+                            <p class="info_txt">By clicking the button below, I acknowledge that I have reviewed the <a href="" class="btn_txt">Privacy Statement</a> and have reviewd and accept the <a href="" class="btn_txt">Rules and Restrictions</a> and <a href="" class="btn_txt">Terms of Use</a>.</p>
+
+                            <button class="btn blue">Complete Booking</button>
+                            <p class="info_txt">
+                                <i><img src="/image/sub/lock.png" alt=""></i>
+                                We use secure transmission and encrypted storage to protect your personal information
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="reservation_right">
+                    <div class="place_box">
+                        <div class="thumb"><img src="/image/sub/temp.png" alt=""></div>
+                        <div class="place_info">
+                            <p class="place_name">Lakeside Motel Warefront</p>
+                            <div class="grade_box">
+                                <div class="grade">
+                                    <i class="star"></i>
+                                    <i class="star"></i>
+                                    <i class="star"></i>
+                                    <i class="star"></i>
+                                    <i class="star"></i>
+                                </div>
+                                <p>5.0 (1200 Reviews)</p>
+                            </div>
+                            <ul class="place_detail_info">
+                                <li><span class="red">Non refundable</span></li>
+                                <li>Check in: Sunday, March 18, 2022</li>
+                                <li>Check out: Tuesday, March 20, 2022</li>
+                                <li>2 night stay</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="reservation_box reservation_price">
+                        <div class="reservation_head">
+                            <h3>Price Details</h3>
+                        </div>
+                        <div class="reservation_body">
+                            <ul class="detail_price">
+                                <li>
+                                    1 room X 2 nights
+                                    <span>$ 120.32</span>
+                                </li>
+                                <li>Tax and service fees
+                                    <span>$ 8.32</span>
+                                </li>
+                            </ul>
+                            <div class="total_price">
+                                <div class="item">
+                                    <span>Total</span>
+                                    <strong>$1,200</strong>
+                                </div>
+                                <a href="" class="btn_txt">Use a coupon, credit or promotional code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_inner_contain">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="/image/footer_logo.svg">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet
+                        <br>consectetur adipiscing elit aliquam
+                    </p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#">
+                                <img src="/image/Twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/YouTube.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/image/Instagram.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_nav">
+                    <div class="footer_nav-list">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Your Travel</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/itinerary/itinerary.html">Itinerary</a>
+                            </li>
+                            <li>
+                                <a href="/page/hotel/hotel_list.html">Stays</a>
+                            </li>
+                            <li>
+                                <a href="/page/restaurants/restaurants.html">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="/page/activity/activity.html">Activities </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Community</h4>
+                        <ul>
+                            <li>
+                                <a href="/page/cscenter/help.html">Help</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/page/cscenter/notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav-list">
+                        <h4>Privacy Policy</h4>
+                        <ul>
+                            <li>
+                                <a href="./page/terms_of_use.html">terms of use</a>
+                            </li>
+                            <li>
+                                <a href="./page/privacy.html">privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">Copyright © 2024 we share trip</p>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/slide.js"></script>
+<script src="/js/fakeSelect.js"></script>
+
+</html>
