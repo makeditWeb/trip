@@ -3184,3 +3184,10 @@ button.round_btn.plus:hover::after {
 .alert_btm.tar {
     text-align: right;
 }
+
+.ui-state-highlight {
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    margin: 10px 0;
+}
