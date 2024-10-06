@@ -36,10 +36,14 @@ $(document).ready(function () {
     let destinationCount = 1;
     $('#destination_add_btn').click(function () {
         destinationCount++;
-        let newDestination = $('#destination_template').clone();
+        let newDestination = $('#destination_template').clone(true);
         newDestination.attr('id', 'destination_' + destinationCount);
         newDestination.show();
         newDestination.insertBefore('.iti_btn_box');
+        newDestination.find(".icon_datepicker").removeClass('hasDatepicker').datepicker();
+        newDestination.find(".que_tit .btn").addClass('view_more');
+
+        reloadScript();
     });
 
     // 초기화: 모바일 환경일 때 첫 번째 탭만 보이도록 설정

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/substyle.css">
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -268,23 +269,7 @@
                             <div class="que_tit">도시 검색
                                 <button type="button" class="btn white">도시검색하기</button>
                             </div>
-                            <div class="row_box">
-                                <div class="filter_dropdown">
-                                    <select id="" class="filterSelect">
-                                        <option value="">동남아시아</option>
-                                        <option value="">미주</option>
-                                        <option value="">유럽</option>
-                                    </select>
-                                </div>
-                                <div class="filter_dropdown">
-                                    <select id="" class="filterSelect">
-                                        <option value="">태국</option>
-                                        <option value="">미국</option>
-                                        <option value="">프랑스</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
+
                             <div class="que_tit">여행 시작 날짜</div>
                             <div class="ipt_calendar">
                                 <input type="text" value="2023.06.06" class="icon_datepicker">
@@ -444,6 +429,155 @@
     </footer>
 
     
+
+    <div class="modal_main modal_itinerary">
+        <div class="modal-content">
+            <span class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </span>
+            <div class="itinerary_search">
+                <section class="search_contain">
+                    <p>Where do you want to go?</p>
+                    <div class="main-search_box">
+                        <div class="search_inner">
+                            <input type="text" placeholder="">
+                            <button type="button" class="search_icon">
+                                <img src="/image/search_icon.svg">
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="popup-content">
+                <section>
+                    <div class="itinerary_wrap">
+                        <div class="itinerary_title">
+                            <h2>벨기에 <span>유럽</span></h2>
+                            <button type="button" class="btn_txt">선택하기</button>
+                        </div>
+                        <div class="visual_map">
+                            <div class="item visual">
+                                <img src="/image/sub/temp.png" alt="">
+                            </div>
+                            <div class="item map">
+                                <div id="map" class="map"></div>
+                            </div>
+                        </div>
+
+                        <div class="itinerary_title">
+                            <h2>벨기에 추천 장소</h2>
+                            <button type="button" class="btn_txt gr">more +</button>
+                        </div>
+                        <div class="best_wrap">
+                            <div class="best_cont_area">
+                                <div class="cont">
+                                    <a href="#" class="best_link">
+                                        <div class="best_thumb">
+                                            <img src="/image/main/main_list01.png">
+                                        </div>
+                                        <div class="best_info">
+                                            <p class="best_info_title">Sydeny’s 10 most fashionable 5 star hotels</p>
+                                            <p class="best_info_txt">Browse the fastest growing tourism sector in the heart of Australia tourism capital ....</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cont">
+                                    <a href="#" class="best_link">
+                                        <div class="best_thumb">
+                                            <img src="/image/main/main_list02.png">
+                                        </div>
+                                        <div class="best_info">
+                                            
+                                            <p class="best_info_txt">Browse the fastest growing tourism sector in the heart of Australia tourism capital ....</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cont">
+                                    <a href="#" class="best_link">
+                                        <div class="best_thumb">
+                                            <img src="/image/main/main_list03.png">
+                                        </div>
+                                        <div class="best_info">
+                                            <p class="best_info_title">Sydeny’s 10 most fashionable 5 star hotels</p>
+                                            <p class="best_info_txt">Browse the fastest growing tourism sector in the heart of Australia tourism capital ....</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="itinerary_title">
+                            <h2>근처 도시를 추천해드릴게요!</h2>
+                        </div>
+                        <div class="featured_slide_wrap">
+                            <div class="swiper featured_slide2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="featured_link">
+                                            <div class="featured_thumb">
+                                                <img src="/image/main/main_list01.png">
+                                            </div>
+                                            <div class="featured_info">
+                                                <p class="featured_info_txt"><i class="icon_location"></i>4.2km</p>
+                                                <p class="featured_info_title">파리</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="featured_link">
+                                            <div class="featured_thumb">
+                                                <img src="/image/main/main_list02.png">
+                                            </div>
+                                            <div class="featured_info">
+                                                <p class="featured_info_txt"><i class="icon_location"></i>4.2km</p>
+                                                <p class="featured_info_title">파리</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="featured_link">
+                                            <div class="featured_thumb">
+                                                <img src="/image/main/main_list03.png">
+                                            </div>
+                                            <div class="featured_info">
+                                                <p class="featured_info_txt"><i class="icon_location"></i>4.2km</p>
+                                                <p class="featured_info_title">파리</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="featured_link">
+                                            <div class="featured_thumb">
+                                                <img src="/image/main/main_list04.png">
+                                            </div>
+                                            <div class="featured_info">
+                                                <p class="featured_info_txt"><i class="icon_location"></i>4.2km</p>
+                                                <p class="featured_info_title">파리</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="featured_link">
+                                            <div class="featured_thumb">
+                                                <img src="/image/main/main_list05.png">
+                                            </div>
+                                            <div class="featured_info">
+                                                <p class="featured_info_txt"><i class="icon_location"></i>4.2km</p>
+                                                <p class="featured_info_title">파리</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 
@@ -451,7 +585,11 @@
 <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiJzF9_o9ZTwLdumCKaIYqYnhC3Q9TdZY"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="/js/header.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/slide.js"></script>
 <script src="/js/datepicker.js"></script>
+<script src="/js/modal.js"></script>
 <script src="/js/itinerary.js"></script>
 </html>
