@@ -1,3 +1,13 @@
+function reloadScript() {
+    const scriptElement = document.querySelector('script[src="/js/modal.js"]');
+    if (scriptElement) {
+        scriptElement.remove();
+    }
+    const newScriptElement = document.createElement('script');
+    newScriptElement.src = '/js/modal.js';
+    document.body.appendChild(newScriptElement);
+}
+
 $(document).ready(function() {
     // switchTab
     function switchTab(nextTab) {
@@ -20,11 +30,16 @@ $(document).ready(function() {
     let destinationCount = 1;
     $('#destination_add_btn').click(function() {
         destinationCount++;
-        let newDestination = $('#destination_template').clone();
+        let newDestination = $('#destination_template').clone(true);
         newDestination.attr('id', 'destination_' + destinationCount);
         newDestination.show();
         newDestination.insertBefore('.iti_btn_box');
+        newDestination.find(".icon_datepicker").removeClass('hasDatepicker').datepicker();
+        newDestination.find(".que_tit .btn").addClass('view_more');
+
+        reloadScript();
     });
+
 });
 
 
