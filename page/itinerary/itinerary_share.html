@@ -22,84 +22,184 @@
 <body>
     <header>
         <div class="header_inner">
+            <div class="header_top">
+                <select class="select_language">
+                    <option>Languages</option>
+                    <option>Korea</option>
+                    <option>English</option>
+                    <option>中國語</option>
+                    <option>日本語</option>
+                </select>
+    
+                <select class="select_money">
+                    <option>KRW</option>
+                    <option>USD</option>
+                    <option>CNY</option>
+                    <option>JPY</option>
+                    <option>THB</option>
+                </select>
+            </div>
             <nav>
                 <div class="nav_inner">
-                    <div class="logo">
+                    <div class="logo pc_logo">
                         <a href="/">
-                            <img src="/image/header_logo.png" alt="logo">
+                            <img src="../../image/header_logo.png" alt="logo">
                         </a>
                     </div>
+    
+                    <!-- 모바일 로고 -->
+                    <div class="logo mobile_logo">
+                        <a href="/">
+                            <img src="../../image/m_logo.png" alt="logo">
+                        </a>
+                    </div>
+    
                     <ul class="navbar_list">
-        
                         <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
                         <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
                         <li><a href="/page/activity/activity.html">Activity</a></li>
                         <li><a href="/page/restaurants/restaurants.html">Restaurants</a></li>
                     </ul>
+    
                     <div class="header_right">
                         <!-- 로그인 전 -->
                         <div class="login_before">
-                            <a href="/signup.html" class="header_btn signUp-link">Sign Up</a> 
-                            <a href="/login.html" class="header_btn signIn-link">Sign In</a> 
+                            <a href="./signup.html" class="header_btn signUp-link">Sign Up</a>
+                            <a href="./login.html" class="header_btn signIn-link">Sign In</a>
                         </div>
                         <!-- 로그인 후 -->
                         <div class="login_after" style="display: none;">
                             <div class="alarm">
-                                <img src="/image/alarm.png">
+                                <img src="./image/alarm.png">
                                 <span></span>
                             </div>
                             <div class="mypage_dropdown">
                                 <div class="mypage_image">
-                                    <img src="/image/mypage.png" alt="mypage">
+                                    <img src="./image/mypage.png" alt="mypage">
                                 </div>
-                                <div class="mypage_link" >
+                                <div class="mypage_link">
                                     <div class="mypage_name" id="mypageName">
                                         <p>Shahryar</p>
-                                        <img src="/image/down.png">
+                                        <img src="./image/down.png">
                                     </div>
                                     <ul class="dropdown_quick" id="dropdownQuick">
                                         <li>
-                                            <a href="/page/mypagae/mypage_main.html">
-                                                <img src="/image/mypage_icon.png">
+                                            <a href="./page/mypagae/mypage_main.html">
+                                                <img src="./image/mypage_icon.png">
                                                 <p>Mypage</p>
                                             </a>
-            
                                         </li>
                                         <li>
-                                            <a href="/page/mypagae/mypage_setting.html">
-                                                <img src="/image/setting.png">
+                                            <a href="./page/mypagae/mypage_setting.html">
+                                                <img src="./image/setting.png">
                                                 <p>Settings</p>
                                             </a>
-            
                                         </li>
-                                        <!-- 로그인 후 -->
-                                        <li>
-                                            <a href="/" >
-                                                <img src="/image/logout.png">
-                                                <p>Logout</p>
-                                            </a>
-            
-                                        </li>
-                                        <!-- 로그인 전 -->
                                         <li>
                                             <a href="/">
-                                                <img src="/image/login.svg">
+                                                <img src="./image/logout.png">
+                                                <p>Logout</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/">
+                                                <img src="./image/login.svg">
                                                 <p>Loin</p>
                                             </a>
-            
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+    
+                    <!-- 메뉴 아이콘 -->
+                    <div class="menu_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
                     </div>
                 </div>
-
-    
             </nav>
         </div>
+    
+        <!-- 모바일 메뉴바 -->
+        <div class="mobile_menu" id="mobileMenu">
+            
+            <div class="mobile_headbar">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/image/m_logo.png" alt="logo">
+                    </a>
+                </div>
 
+                <div class="close_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </div>
+
+
+ 
+
+            </div>
+
+
+            <div class="header_right">
+                <!-- 로그인 전 -->
+                <div class="login_before">
+                    <a href="/signup.html" class="header_btn signUp-link">Sign Up</a>
+                    <a href="/login.html" class="header_btn signIn-link">Sign In</a>
+                </div>
+                <!-- 로그인 후 -->
+                <div class="login_after" style="display: none;">
+
+                    <div class="mypage_container">
+                        <div class="mypage_inner">
+                            <div class="mypage_image">
+                                <img src="../../image/mypage.png" alt="mypage">
+                            </div>
+                            <div class="mypage_inner_header">
+ 
+                                <div class="mypage_welcome">
+                                    <h4>반갑습니다 <span>test님</span></h4>
+                                </div>
+                                <a href="#">마이페이지</a>
+                            </div>
+  
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+    
+            <ul class="navbar_list">
+                <li><a href="/page/itinerary/itinerary.html">Itinerary</a></li>
+                <li><a href="/page/hotel/hotel_list.html">Hotel</a></li>
+                <li><a href="/page/activity/activity.html">Activity</a></li>
+                <li><a href="/page/restaurants/restaurants.html">Restaurants</a></li>
+            </ul>
+
+            <div class="header_top">
+                <select class="select_language">
+                    <option>Languages</option>
+                    <option>Korea</option>
+                    <option>English</option>
+                    <option>中國語</option>
+                    <option>日本語</option>
+                </select>
+
+                <select class="select_money">
+                    <option>KRW</option>
+                    <option>USD</option>
+                    <option>CNY</option>
+                    <option>JPY</option>
+                    <option>THB</option>
+                </select>
+            </div>
+        </div>
     </header>
 
     

@@ -1,8 +1,6 @@
 /* common */
 
-.nav_inner{
-    padding: 0;
-}
+
 
 /* 활동지 */
 
@@ -1056,7 +1054,7 @@ button.round_btn.plus:hover::after {
 }
 .subPage_wrap {
     width: 1400px;
-    margin: 110px auto 100px;
+    margin: 150px auto 100px;
     padding-top: 50px;
 }
 .subPage_wrap .btn,
@@ -1392,17 +1390,31 @@ button.round_btn.plus:hover::after {
 .reg_wrap .tabs {
     margin: 0 auto;
 }
+
+.tab-link a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tab-link a p{
+    margin-top: 0;
+}
 .reg_wrap .tab-content {
     width: 100%;
 }
 .reg_wrap .btm_btn_box {
     margin-top: 50px;
     text-align: right;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
 }
-.reg_wrap .btm_btn_box .btn {
+.reg_wrap .btm_btn_box a {
     font-size: 18px;
     padding: 18px;
-    min-width: 160px;
+    width: 160px;
 }
 .reg_wrap .input_sign .col2 {
     display: flex;
@@ -1547,7 +1559,7 @@ button.round_btn.plus:hover::after {
     margin-bottom: 20px;
 }
 .reg_step_2 .default {
-    width: 730px;
+    width: 100%;
     padding-left: 40px;
 }
 .reg_step_2 .location {
@@ -2674,6 +2686,7 @@ button.round_btn.plus:hover::after {
     align-items: flex-end;
     gap: 25px;
     margin-bottom: 40px;
+    padding: 50px 0;
 }
 .schedule_top .title_box h2 {
     font-size: 32px;
@@ -2903,6 +2916,7 @@ button.round_btn.plus:hover::after {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 30px;
+    padding: 50px 0;
 }
 .reservation_wrap .btn_txt {
     font-size: 16px;
@@ -3000,6 +3014,13 @@ button.round_btn.plus:hover::after {
     font-size: 15px;
     background: #2F80ED;
 }
+
+.room_area {
+    height: 700px;
+    overflow-y: auto;
+}
+
+
 
 .ipt_gray {
     margin: 20px 0;
@@ -3190,4 +3211,1108 @@ button.round_btn.plus:hover::after {
     background-color: #f0f0f0;
     border: 1px dashed #ccc;
     margin: 10px 0;
+}
+.filter-toggle-btn{
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+    .itinerary_search .search_contain{
+        width: 100%;
+    }
+
+    .itinerary_search{
+        height: 360px;
+        object-fit: cover;
+    }
+
+    .itinerary_search .search_contain p{
+        font-size: 22px;
+    }
+
+    .main-search_box{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .filter_dropdown{
+        padding: 0 20px;
+    }
+    .search_contain .search_inner{
+        width: 100%;
+    }
+
+    .subPage_wrap.itinerary_wrap {
+        width: 100%;
+    }
+
+    .itinerary_title > h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .itinerary_title > h2 > span {
+        font-size: 16px;
+    }
+
+    .itinerary_title{
+        padding: 0 20px;
+    }
+
+    .subPage_wrap .btn_icon{
+        font-size: 15px;
+    }
+
+    .subPage_wrap .btn_icon.plus:before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 13px;
+        border-radius: 100%;
+        background: var(--main-color);
+        color: #fff;
+    }
+
+    .subPage_wrap .btn_icon.plus:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        background: url(/image/sub/plus_wh.png) no-repeat;
+    }
+
+    .itinerary_wrap{
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+    .itinerary_wrap .visual_map{
+        flex-direction: column-reverse;
+    }
+
+    .itinerary_wrap .visual_map .item{
+        flex: 1;
+    }
+
+    .center_box h3 {
+        font-size: 18px;
+        font-weight: 600;
+        word-break: keep-all;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .subPage_wrap{
+        width: 100%;
+        padding: 0 20px;
+        margin: 100px auto;
+        box-sizing: border-box;
+    }
+
+
+
+    .subPage_wrap .btn_txt, .itinerary_wrap .btn_txt{
+        font-size: 18px;
+    }
+
+    .tabs-2 .tab-link{
+        font-size: 18px
+    }
+
+    .tab_wrap .tabs-2, .tab_wrap .tab-content-2{
+        width: 100%;
+    }
+
+    .tab_wrap .tabs-2{
+        padding: 0 20px;
+    }
+
+    .tabs-2{
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .list_box_item{
+        padding: 0 20px;
+    }
+    .list_box_item .box_item{
+        width: 100%;
+    }
+
+    .featured_thumb{
+        height: 300px;
+    }
+
+    .featured_link{
+        height: 300px;
+    }
+
+    .featured_slide_wrap{
+        padding-left: 0;
+        padding: 0 20px;
+    }
+
+    .featured_info_title {
+        font-size: 16px;
+    }
+
+    .center_box {
+        margin: 100px 0 50px;
+        text-align: center;
+    }
+
+    .best_cont_area {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .best_cont_area .cont {
+        width: 100%;
+    }
+
+    .best_info_title{
+        font-size: 15px;
+    }
+
+    .best_info_txt{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .reg_box{
+        width: 100%;
+        padding:20px;
+        box-sizing: border-box;
+    }
+
+    .write_wrap .reg_box .tabs{
+        gap: 22px;
+    }
+
+
+    ul.tabs{
+        width: 100%;
+    }
+
+    /* .reg_wrap{
+        padding: 0 20px;
+    } */
+
+    li.tab-link p{
+        font-size: 20px;
+    }
+
+    ul.tabs li {
+        display: none; /* 모든 탭 숨기기 */
+    }
+    
+    ul.tabs li.current {
+        display: flex; /* 현재 선택된 탭만 보이기 */
+    }
+
+    .write_wrap .que_tit{
+        font-size: 16px;
+    }
+
+    .tab-content{margin-top: 30px;}
+
+    .subPage_wrap .btn{
+        font-size: 18px;
+    }
+
+    .box_radio label{
+        font-size: 14px;
+    }
+
+    .box_radio .item{
+        flex-grow: unset;
+        width: 31%;
+
+    }
+
+    .reg_wrap .btm_btn_box{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .reg_wrap .btm_btn_box .btn{
+        min-width: unset;
+        width: 50%;
+    }
+
+    .write_wrap .row_box{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .write_wrap .filter_dropdown{
+        width: 100%;
+    }
+
+    .write_wrap .ipt_calendar {
+        width: 100%;
+    }
+
+    .list_visit .cont{
+        gap: 10px;
+        width: 600px;
+    }
+
+    .list_visit{
+        overflow-x: auto;
+    }
+
+    .list_visit .cont .txt{
+        font-size: 14px;
+        width: 30%;
+    }
+
+    .list_visit .cont .name {
+        font-size: 14px;
+        font-weight: 500;
+        width: 20%;
+    }
+
+
+    .write_wrap .row_box.type2  .box_radio .item{
+        width: 50%;
+        flex: 1;
+    }
+
+    .subPage_wrap.reservation_wrap {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .reservation_cont {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .reservation_left {
+        flex: unset;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .reservation_body {
+        padding: 32px 0;
+    }
+
+    .reservation_box .tabs{
+        padding: 8px 0 0;
+    }
+
+    .ipt_col{
+        flex-direction: column;
+    }
+
+    .reservation_right {
+        flex: unset;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .card_info{
+        font-size: 14px;
+    }
+
+    .subPage_wrap .card_info  a.btn_txt{
+        font-size: 15px;
+    }
+
+    .mandatory_box .icon{
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+    }
+
+    .reservation_body .btn.blue{
+        width: 100%;
+    }
+
+    .schedule_table_wrap {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .subPage_wrap.schedule_wrap {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .schedule_top .title_box {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 40px;
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    .schedule_top .title_box h2 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .schedule_top .title_box p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #BDBDBC;
+    }
+
+    .tabs-3 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .tabs-3 .tab-link{
+        min-width: unset;
+        width: 100%;
+    }
+
+    .schedule_row{
+        flex-direction: column;
+    }
+
+    .schedule_table {
+        flex: unset;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .card_box .img_box {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-direction: column;
+        margin-top: 36px;
+    }
+
+    .card_box .thumb{
+        min-width: unset;
+        width: 100%;
+    }
+
+    .card_box.with_box .img_box{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .card_box.with_box .img_box .thumb{
+        width: 50px;
+        height: 50px;
+    }
+
+    .schedule_table_wrap .num{
+        font-size: 15px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .schedule_table_wrap .add_btn{
+        padding: 30px 0;
+    }
+
+    .card_box .desc{
+        font-size: 13px;
+    }
+    .card_info{
+        width: 100%;
+    }
+    .icon_box {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .schedule_table_wrap .distance{
+        margin-top: 0;
+    }
+
+    .card_box .mint_tit{
+        font-size: 20px;
+    }
+
+    .check_box label{
+        font-size: 12px;
+    }
+
+    .traffic .time_required{
+        font-size: 12px;
+    }
+
+    .itinerary_search.before{
+        height: 500px;
+    }
+
+    .itinerary_share_wrap .input_sign{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .itinerary_share_wrap .input_sign label{
+        min-width: unset;
+        font-size: 15px;
+        width: 150px;
+    }
+
+    .reg_img_wrap .cont{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .reg_img_wrap{
+        width: 100%;
+    }
+
+    .reg_img_wrap .reg_img{
+        width: 100%;
+    }
+
+    .itinerary_share_wrap .top_area {
+        margin-bottom: 15px;
+    }
+
+
+    .hotel_img_area {
+        margin: 40px 0;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .hotel_img_area .l_box, .hotel_img_area .r_box {
+        width: 100%;
+    }
+
+    .hotel_img_area .sm_img_box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hotel_img_area .r_box .img_box {
+        position: relative;
+        width: 48%;
+    }
+
+    .hotel_img_area .img_box > p{
+        font-size: 16px;
+    }
+
+    .hotel_img_area .title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .info_box .txt_box {
+        padding: 25px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap:20px;
+    }
+
+    .info_box .txt_box h3 {
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    .info_box .txt_box .grade_box .country{
+        font-size: 15px;
+    }
+
+    .info_box .txt_box .grade_box p {
+        font-size: 15px;
+    }
+
+    .grade .star{
+        width: 12px;
+        height: 12px;
+    }
+
+    .info_box .txt_box .sub_txt{
+        font-size: 13px;
+    }
+
+    .info_detail{
+        padding: 25px 16px;
+    }
+
+    .info_detail .item p{
+        font-size: 14px
+    }
+
+    .info_detail .item img{
+        width: 12px;
+    }
+
+    .service_list img{
+        width: 40px;
+    }
+
+    .service_list p{
+        font-size: 12px;
+    }
+
+    .service_tit{
+        font-size: 16px;
+    }
+
+    .room_list_wrap{
+        flex-direction: column;
+    }
+
+    .room_detail {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-left: 0px;
+        padding-left: 0;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background: #fff;
+        padding: 0 16px 50px;
+    }
+
+    .room_detail_card{
+        box-sizing: border-box;
+    }
+
+    .card_tit p {
+        margin-top: 15px;
+        font-size: 19px;
+    }
+
+    .room_list_wrap .content_tap{
+        width: 100%;
+    }
+
+    .ipt_area.col2 {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    .ipt_box > input{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .room_list_wrap ul.tabs li{
+        display: block;
+    }
+
+    .room_box{
+        flex-direction: column;
+    }
+
+    .room_list_wrap .tab-content{
+        padding: 0;
+    }
+
+    .room_list_wrap ul.tabs li{
+        width: 50%;
+        padding: 10px 40px;
+        font-size: 18px;
+    }
+
+    .room_thumb{
+        width: 100%;
+    }
+
+    .room_cont{
+        width: 100%;
+        padding:20px 0;
+
+    }
+
+    .basic_info li{
+        font-size: 14px;
+        justify-content: flex-end;
+    }
+
+    .room_bottom .btn_add{
+        min-width: unset;
+    }
+
+    .room_bottom .price > strong {
+        font-size: 19px;
+        font-weight: 700;
+    }
+
+    .basic_info img{
+        width: 20px;
+    }
+
+    .basic_info{
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .room_top{
+        padding: 20px 0;
+    }
+
+    .price_box span{
+        font-size: 12px;
+    }
+
+    .price_box strong{
+        font-size: 16px;
+    }
+
+    .room_detail_card .total_price .add_price > span{
+        font-size: 10px;
+    }
+
+    .room_detail_card .total_price .add_price > strong{
+        font-size: 14px;
+    }
+
+    
+    .room_detail .total_box .total_price strong{
+        font-size: 20px;
+    }
+
+    .room_area {
+        height: auto;
+        overflow-y: unset;
+    }
+
+    .room_detail .total_box {
+        margin-top: 20px;
+    }
+
+    .room_detail .total_box .total_price span {
+        display: block;
+        position: relative;
+        top: unset;
+        left: unset;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .room_detail .total_box .total_price {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        background: var(--main-color);
+        border-radius: 8px;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 50px;
+    }
+
+    .room_detail .total_box .btn{
+        font-size: 22px;
+        height: 60px;
+    }
+
+    .room_detail_card {
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* 숨겨진 상태 */
+    .room_detail_card.hidden {
+        max-height: 0; /* 높이를 0으로 */
+        opacity: 0; /* 투명도 조정 */
+        padding: 0;
+        margin: 0;
+        border: none; /* 여백 및 테두리 없애기 */
+    }
+
+    /* chevron-up 버튼 기본 스타일 */
+    .accordion-toggle .accordion-btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .reg_step_1 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .reg_wrap .input_sign .col2 {
+        display: flex;
+        column-gap: 0px;
+        width: 100%;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .wright-contain_all li.tab-link{
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .wright-contain_all li.tab-link.current p{
+        margin-top: 0;
+    }
+
+    .reg_step_2 {
+        width: 100%;
+        margin: 0 auto;
+        padding: 45px 20px;
+        box-shadow: 0px 5px 11.6px 0px #7A7A7A40;
+        border-radius: 14px;
+    }
+
+    .reg_step_2 .default {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .reg_wrap .reg_tit_box {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .reg_step_2 .time_select{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .reg_step_2 .select2-container {
+        width: 45% !important;
+    }
+
+    .reg_step_2.checkout_time .select2-container {
+        width: 100% !important;
+    }
+
+    .reg_step_2 .time_select .txt{
+        font-size: 16px;
+    }
+
+    .box_chk .item{
+        width: 100%;
+    }
+
+    .box_chk label{
+        min-width: unset;
+        width: 100%;
+        aspect-ratio:unset;
+    }
+
+    .reg_wrap .input_sign .col2 .btn {
+        width: 100%;
+    }
+
+    .reg_step_2 .location {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .reg_wrap .completion_box {
+        font-size: 18px;
+    }
+
+    .reg_wrap .completion_box .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .reg_wrap .completion_box .icon::after{
+        width: 4px;
+        height: 11px;
+    }
+
+    .filter-aside {
+        display: none; /* 기본적으로 숨김 */
+        position: fixed; /* 화면에 고정 */
+        top: 0;
+        right: 0;
+        width: 80%; /* 모바일 화면의 80% 너비 */
+        height: 100%; /* 전체 높이 */
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto; /* 스크롤바 추가 */
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%); /* 오른쪽에서 슬라이드되어 나오기 */
+    }
+
+    /* aside가 활성화된 경우 (보이는 상태) */
+    .filter-aside.active {
+        display: block;
+        transform: translateX(0); /* 원래 위치로 슬라이드 */
+        width: 100%;
+        padding: 100px 20px 30px;
+        box-sizing: border-box;
+    }
+
+    .filter-header button{
+        background: none;
+        border: none;
+    }
+
+    .activity_filter {
+        margin-top: 30px;
+    }
+
+    .filter_contain{
+        margin-bottom: 0;
+        padding-top: 20px;
+    }
+
+    .filter-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* 필터 버튼 스타일 */
+    .filter-toggle-btn {
+        display: block; /* 모바일에서만 보이도록 */
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .filter-toggle-btn img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .activity_list_inner{
+        flex-direction: column;
+        
+    }
+
+    .activity_contain_Wrapper{
+        position: relative;
+        flex-direction: column;
+    }
+
+    .activity_contain_Wrapper .activity_list {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .filter-toggle-btn{
+        display: block;
+    }
+
+    .search_contain {
+        margin: 200px auto 0;
+        max-width: 100%;
+    }
+
+    .activity_list_inner li {
+        width: 100%;
+    }
+
+    .activity_list_inner li a img{
+        aspect-ratio: unset;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .activity_contain_inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .activity_detail_inner {
+        max-width: 100%;
+        margin: 50px auto 0;
+        position: relative;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .activity_detail_inner .swiper-slide{
+        height: 300px;
+        border-radius: 0;
+    }
+
+    .review_wrapp {
+        margin-top: 16px;
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+        flex-direction: column;
+    }
+
+    .activity_detail_wrapp {
+        padding: 100px 20px 0;
+    }
+
+    .activity_sub_info li{
+        align-items: flex-start;
+    }
+
+    .active_content_wrapp {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content_tap {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .active_content_wrapp ul.tabs li{
+        display: block;
+    }
+
+    .price_info_wrpp {
+        display: flex;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .active_content_wrapp .tab-content{
+        width: 100%;
+    }
+
+    .price_base{
+        margin-right: 0;
+    }
+    .content_location {
+        margin-left: 0;
+        position: relative;
+        padding-left: 0;
+        width: 100%;
+    }
+
+
+
+
+    .recommend_title {
+        color: #181818;
+        font-family: Pretendard;
+        font-size: 21px;
+        font-weight: 700;
+        text-decoration-line: underline;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .recommend_slide {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .recommend_slide .swiper{
+        width: 100%;
+    }
+
+    .activity_detail_inner .swiper-button-prev, .activity_detail_inner .swiper-rtl .swiper-button-next {
+        left: 10px;
+    }
+
+    .activity_detail_inner .swiper-button-next, .activity_detail_inner .swiper-rtl .swiper-button-prev {
+        right: 10px;
+    }
+
+    .recommend_box{
+        margin-top: 50px;
+    }
+
+    .recommend_box p {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    .recommend_box .btn{
+        font-size: 16px;
+        border-radius: 7px;
+    }
+
+    .write_wrap .reg_img_wrap{
+        flex-direction: column;
+    }
+
+    .write_wrap .reg_img_wrap .item:nth-child(2) .reg_img {
+        height: auto;
+        flex: unset;
+        aspect-ratio: 1 / 1;
+    }
+
+    .write_wrap .info_box {
+        padding: 20px;
+    }
+
+    .write_wrap .info_box .filter_dropdown {
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .write_wrap .info_box .category {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .write_wrap .restaurants_menu .reg_img_wrap .box {
+        flex: unset;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content_location::before{
+        display: none;
+    }
+
+    .content_location #map {
+        height: 300px;
+        width: 100%;
+    }
+
+    .write_wrap .restaurants_menu .reg_img_wrap .box .reg_img{
+        aspect-ratio: 1 / 1;
+        flex: unset;
+        height: fit-content;
+    }
 }

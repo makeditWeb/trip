@@ -1730,3 +1730,276 @@ font-weight: 500;
 .detail_location{
     margin-top: 20px;
 }
+
+
+.mobile_menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mobile_menu ul {
+    padding: 50px 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.mobile_menu ul li {
+    margin: 20px 0;
+}
+
+.mobile_menu ul li a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.mobile_menu.active {
+    display: block;
+    right: 0;
+}
+
+.mobile_menu .header_right{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.mobile_headbar .header_top{
+    display: block;
+}
+
+.mobile_menu .header_top{
+    display: flex;
+    margin: 20px 0;
+    justify-content: flex-start;
+}
+
+.close_icon {
+    padding: 0 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close_icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.mobile_menu .navbar_list{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.mobile_menu .header_top {
+    display: flex;
+    margin: 20px 0;
+}
+
+.logo.mobile_logo{
+    display: none;
+}
+
+.menu_icon {
+    display: none;
+}
+
+/* 전체 페이지 스크롤바 스타일링 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #31A2AC;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #EBF6F7;
+}
+
+
+/* 모바일 레이아웃 */
+@media screen and (max-width: 768px) {
+
+    .header_inner{
+        width: 100%;
+        padding: 20px 16px;
+        box-sizing: border-box;
+    }
+    .pc_logo {
+        display: none;
+    }
+
+    .nav_inner{
+        padding: 0;
+    }
+    .nav_inner .logo.mobile_logo {
+        display: block;
+    }
+
+    .nav_inner .logo.mobile_logo a{
+        width:50px;
+    }
+
+    .nav_inner .logo.mobile_logo a img{
+        width: 100%;
+    }
+    .navbar_list {
+        display: none;
+    }
+    .menu_icon {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .menu_icon svg {
+        width: 24px;
+        height: 24px;
+        fill: #333;
+    }
+
+
+    .header_right{
+        display: none;
+    }
+
+    .mobile_headbar .logo a{
+        width: 50px;
+        display: block;
+    }
+
+    .mobile_headbar .logo a img{
+        width: 100%;
+    }
+
+    .mobile_headbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header_top{
+        display: none;
+    }
+    /* main */
+
+    .city_map{
+        width: 100%;
+        padding: 100px 0;
+    }
+
+    .city_map .select2-container{
+        width: 48%!important;
+    }
+
+    .main-search_box{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .main_list_inner{
+        grid-template-columns: 1fr;
+    }
+
+    .main_list{
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .search_inner input{
+        width:100%;
+    }
+
+    .main-search_box p{
+        display: none;
+    }
+
+    .search_inner {
+        position: relative;
+        width: 80%;
+    }
+
+    .filter_icon{
+        margin-left: 0;
+    }
+
+    .city_select {
+        margin: 60px 0;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    #map{
+        height: 500px;
+    }
+
+    .footer_inner {
+        padding: 50px 16px;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .footer_inner_contain{
+        flex-direction: column;
+    }
+
+    .footer_left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_nav{
+        display: none;
+    }
+
+    .copy {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .login_after{
+        background: #31a2ac;
+        width: 100%;
+        height: 80px;
+        border-radius: 8px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .mypage_inner {
+        display: flex;
+        gap: 20px;
+    }
+
+    .mypage_welcome h4{
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .mypage_welcome h4 span{
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .mypage_inner_header a{
+        color: #fff;
+    } 
+}
